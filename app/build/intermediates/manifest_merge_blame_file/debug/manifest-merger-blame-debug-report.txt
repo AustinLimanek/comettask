@@ -11,7 +11,7 @@
 9-->/Users/austinlimanek/projects/courses/code-401/comettask/app/src/main/AndroidManifest.xml
 10
 11    <application
-11-->/Users/austinlimanek/projects/courses/code-401/comettask/app/src/main/AndroidManifest.xml:5:5-42:19
+11-->/Users/austinlimanek/projects/courses/code-401/comettask/app/src/main/AndroidManifest.xml:5:5-56:19
 12        android:allowBackup="true"
 12-->/Users/austinlimanek/projects/courses/code-401/comettask/app/src/main/AndroidManifest.xml:6:9-35
 13        android:appComponentFactory="androidx.core.app.CoreComponentFactory"
@@ -35,8 +35,8 @@
 23-->/Users/austinlimanek/projects/courses/code-401/comettask/app/src/main/AndroidManifest.xml:13:9-51
 24        <activity
 24-->/Users/austinlimanek/projects/courses/code-401/comettask/app/src/main/AndroidManifest.xml:15:9-21:20
-25            android:name="com.task.CometTask.ViewAllTasks"
-25-->/Users/austinlimanek/projects/courses/code-401/comettask/app/src/main/AndroidManifest.xml:16:13-41
+25            android:name="com.task.CometTask.TaskDetail"
+25-->/Users/austinlimanek/projects/courses/code-401/comettask/app/src/main/AndroidManifest.xml:16:13-39
 26            android:exported="false" >
 26-->/Users/austinlimanek/projects/courses/code-401/comettask/app/src/main/AndroidManifest.xml:17:13-37
 27            <meta-data
@@ -48,8 +48,8 @@
 30        </activity>
 31        <activity
 31-->/Users/austinlimanek/projects/courses/code-401/comettask/app/src/main/AndroidManifest.xml:22:9-28:20
-32            android:name="com.task.CometTask.AddTask"
-32-->/Users/austinlimanek/projects/courses/code-401/comettask/app/src/main/AndroidManifest.xml:23:13-36
+32            android:name="com.task.CometTask.UserSettings"
+32-->/Users/austinlimanek/projects/courses/code-401/comettask/app/src/main/AndroidManifest.xml:23:13-41
 33            android:exported="false" >
 33-->/Users/austinlimanek/projects/courses/code-401/comettask/app/src/main/AndroidManifest.xml:24:13-37
 34            <meta-data
@@ -60,51 +60,77 @@
 36-->/Users/austinlimanek/projects/courses/code-401/comettask/app/src/main/AndroidManifest.xml:20:17-33
 37        </activity>
 38        <activity
-38-->/Users/austinlimanek/projects/courses/code-401/comettask/app/src/main/AndroidManifest.xml:29:9-41:20
-39            android:name="com.task.CometTask.MainActivity"
+38-->/Users/austinlimanek/projects/courses/code-401/comettask/app/src/main/AndroidManifest.xml:29:9-35:20
+39            android:name="com.task.CometTask.ViewAllTasks"
 39-->/Users/austinlimanek/projects/courses/code-401/comettask/app/src/main/AndroidManifest.xml:30:13-41
-40            android:exported="true" >
-40-->/Users/austinlimanek/projects/courses/code-401/comettask/app/src/main/AndroidManifest.xml:31:13-36
-41            <intent-filter>
-41-->/Users/austinlimanek/projects/courses/code-401/comettask/app/src/main/AndroidManifest.xml:32:13-36:29
-42                <action android:name="android.intent.action.MAIN" />
-42-->/Users/austinlimanek/projects/courses/code-401/comettask/app/src/main/AndroidManifest.xml:33:17-69
-42-->/Users/austinlimanek/projects/courses/code-401/comettask/app/src/main/AndroidManifest.xml:33:25-66
-43
-44                <category android:name="android.intent.category.LAUNCHER" />
-44-->/Users/austinlimanek/projects/courses/code-401/comettask/app/src/main/AndroidManifest.xml:35:17-77
-44-->/Users/austinlimanek/projects/courses/code-401/comettask/app/src/main/AndroidManifest.xml:35:27-74
-45            </intent-filter>
-46
-47            <meta-data
-47-->/Users/austinlimanek/projects/courses/code-401/comettask/app/src/main/AndroidManifest.xml:18:13-20:36
-48                android:name="android.app.lib_name"
-48-->/Users/austinlimanek/projects/courses/code-401/comettask/app/src/main/AndroidManifest.xml:19:17-52
-49                android:value="" />
-49-->/Users/austinlimanek/projects/courses/code-401/comettask/app/src/main/AndroidManifest.xml:20:17-33
-50        </activity>
-51
-52        <provider
-52-->[androidx.emoji2:emoji2:1.0.0] /Users/austinlimanek/.gradle/caches/transforms-3/4b580972190c9e236a669c6a1f1f8a9e/transformed/emoji2-1.0.0/AndroidManifest.xml:26:9-34:20
-53            android:name="androidx.startup.InitializationProvider"
-53-->[androidx.emoji2:emoji2:1.0.0] /Users/austinlimanek/.gradle/caches/transforms-3/4b580972190c9e236a669c6a1f1f8a9e/transformed/emoji2-1.0.0/AndroidManifest.xml:27:13-67
-54            android:authorities="com.task.CometTask.androidx-startup"
-54-->[androidx.emoji2:emoji2:1.0.0] /Users/austinlimanek/.gradle/caches/transforms-3/4b580972190c9e236a669c6a1f1f8a9e/transformed/emoji2-1.0.0/AndroidManifest.xml:28:13-68
-55            android:exported="false" >
-55-->[androidx.emoji2:emoji2:1.0.0] /Users/austinlimanek/.gradle/caches/transforms-3/4b580972190c9e236a669c6a1f1f8a9e/transformed/emoji2-1.0.0/AndroidManifest.xml:29:13-37
-56            <meta-data
-56-->[androidx.emoji2:emoji2:1.0.0] /Users/austinlimanek/.gradle/caches/transforms-3/4b580972190c9e236a669c6a1f1f8a9e/transformed/emoji2-1.0.0/AndroidManifest.xml:31:13-33:52
-57                android:name="androidx.emoji2.text.EmojiCompatInitializer"
-57-->[androidx.emoji2:emoji2:1.0.0] /Users/austinlimanek/.gradle/caches/transforms-3/4b580972190c9e236a669c6a1f1f8a9e/transformed/emoji2-1.0.0/AndroidManifest.xml:32:17-75
-58                android:value="androidx.startup" />
-58-->[androidx.emoji2:emoji2:1.0.0] /Users/austinlimanek/.gradle/caches/transforms-3/4b580972190c9e236a669c6a1f1f8a9e/transformed/emoji2-1.0.0/AndroidManifest.xml:33:17-49
-59            <meta-data
-59-->[androidx.lifecycle:lifecycle-process:2.4.0] /Users/austinlimanek/.gradle/caches/transforms-3/dd1064e81b3445eb173cd45521bfd469/transformed/lifecycle-process-2.4.0/AndroidManifest.xml:31:13-33:52
-60                android:name="androidx.lifecycle.ProcessLifecycleInitializer"
-60-->[androidx.lifecycle:lifecycle-process:2.4.0] /Users/austinlimanek/.gradle/caches/transforms-3/dd1064e81b3445eb173cd45521bfd469/transformed/lifecycle-process-2.4.0/AndroidManifest.xml:32:17-78
-61                android:value="androidx.startup" />
-61-->[androidx.lifecycle:lifecycle-process:2.4.0] /Users/austinlimanek/.gradle/caches/transforms-3/dd1064e81b3445eb173cd45521bfd469/transformed/lifecycle-process-2.4.0/AndroidManifest.xml:33:17-49
-62        </provider>
-63    </application>
-64
-65</manifest>
+40            android:exported="false" >
+40-->/Users/austinlimanek/projects/courses/code-401/comettask/app/src/main/AndroidManifest.xml:31:13-37
+41            <meta-data
+41-->/Users/austinlimanek/projects/courses/code-401/comettask/app/src/main/AndroidManifest.xml:18:13-20:36
+42                android:name="android.app.lib_name"
+42-->/Users/austinlimanek/projects/courses/code-401/comettask/app/src/main/AndroidManifest.xml:19:17-52
+43                android:value="" />
+43-->/Users/austinlimanek/projects/courses/code-401/comettask/app/src/main/AndroidManifest.xml:20:17-33
+44        </activity>
+45        <activity
+45-->/Users/austinlimanek/projects/courses/code-401/comettask/app/src/main/AndroidManifest.xml:36:9-42:20
+46            android:name="com.task.CometTask.AddTask"
+46-->/Users/austinlimanek/projects/courses/code-401/comettask/app/src/main/AndroidManifest.xml:37:13-36
+47            android:exported="false" >
+47-->/Users/austinlimanek/projects/courses/code-401/comettask/app/src/main/AndroidManifest.xml:38:13-37
+48            <meta-data
+48-->/Users/austinlimanek/projects/courses/code-401/comettask/app/src/main/AndroidManifest.xml:18:13-20:36
+49                android:name="android.app.lib_name"
+49-->/Users/austinlimanek/projects/courses/code-401/comettask/app/src/main/AndroidManifest.xml:19:17-52
+50                android:value="" />
+50-->/Users/austinlimanek/projects/courses/code-401/comettask/app/src/main/AndroidManifest.xml:20:17-33
+51        </activity>
+52        <activity
+52-->/Users/austinlimanek/projects/courses/code-401/comettask/app/src/main/AndroidManifest.xml:43:9-55:20
+53            android:name="com.task.CometTask.MainActivity"
+53-->/Users/austinlimanek/projects/courses/code-401/comettask/app/src/main/AndroidManifest.xml:44:13-41
+54            android:exported="true" >
+54-->/Users/austinlimanek/projects/courses/code-401/comettask/app/src/main/AndroidManifest.xml:45:13-36
+55            <intent-filter>
+55-->/Users/austinlimanek/projects/courses/code-401/comettask/app/src/main/AndroidManifest.xml:46:13-50:29
+56                <action android:name="android.intent.action.MAIN" />
+56-->/Users/austinlimanek/projects/courses/code-401/comettask/app/src/main/AndroidManifest.xml:47:17-69
+56-->/Users/austinlimanek/projects/courses/code-401/comettask/app/src/main/AndroidManifest.xml:47:25-66
+57
+58                <category android:name="android.intent.category.LAUNCHER" />
+58-->/Users/austinlimanek/projects/courses/code-401/comettask/app/src/main/AndroidManifest.xml:49:17-77
+58-->/Users/austinlimanek/projects/courses/code-401/comettask/app/src/main/AndroidManifest.xml:49:27-74
+59            </intent-filter>
+60
+61            <meta-data
+61-->/Users/austinlimanek/projects/courses/code-401/comettask/app/src/main/AndroidManifest.xml:18:13-20:36
+62                android:name="android.app.lib_name"
+62-->/Users/austinlimanek/projects/courses/code-401/comettask/app/src/main/AndroidManifest.xml:19:17-52
+63                android:value="" />
+63-->/Users/austinlimanek/projects/courses/code-401/comettask/app/src/main/AndroidManifest.xml:20:17-33
+64        </activity>
+65
+66        <provider
+66-->[androidx.emoji2:emoji2:1.0.0] /Users/austinlimanek/.gradle/caches/transforms-3/4b580972190c9e236a669c6a1f1f8a9e/transformed/emoji2-1.0.0/AndroidManifest.xml:26:9-34:20
+67            android:name="androidx.startup.InitializationProvider"
+67-->[androidx.emoji2:emoji2:1.0.0] /Users/austinlimanek/.gradle/caches/transforms-3/4b580972190c9e236a669c6a1f1f8a9e/transformed/emoji2-1.0.0/AndroidManifest.xml:27:13-67
+68            android:authorities="com.task.CometTask.androidx-startup"
+68-->[androidx.emoji2:emoji2:1.0.0] /Users/austinlimanek/.gradle/caches/transforms-3/4b580972190c9e236a669c6a1f1f8a9e/transformed/emoji2-1.0.0/AndroidManifest.xml:28:13-68
+69            android:exported="false" >
+69-->[androidx.emoji2:emoji2:1.0.0] /Users/austinlimanek/.gradle/caches/transforms-3/4b580972190c9e236a669c6a1f1f8a9e/transformed/emoji2-1.0.0/AndroidManifest.xml:29:13-37
+70            <meta-data
+70-->[androidx.emoji2:emoji2:1.0.0] /Users/austinlimanek/.gradle/caches/transforms-3/4b580972190c9e236a669c6a1f1f8a9e/transformed/emoji2-1.0.0/AndroidManifest.xml:31:13-33:52
+71                android:name="androidx.emoji2.text.EmojiCompatInitializer"
+71-->[androidx.emoji2:emoji2:1.0.0] /Users/austinlimanek/.gradle/caches/transforms-3/4b580972190c9e236a669c6a1f1f8a9e/transformed/emoji2-1.0.0/AndroidManifest.xml:32:17-75
+72                android:value="androidx.startup" />
+72-->[androidx.emoji2:emoji2:1.0.0] /Users/austinlimanek/.gradle/caches/transforms-3/4b580972190c9e236a669c6a1f1f8a9e/transformed/emoji2-1.0.0/AndroidManifest.xml:33:17-49
+73            <meta-data
+73-->[androidx.lifecycle:lifecycle-process:2.4.0] /Users/austinlimanek/.gradle/caches/transforms-3/dd1064e81b3445eb173cd45521bfd469/transformed/lifecycle-process-2.4.0/AndroidManifest.xml:31:13-33:52
+74                android:name="androidx.lifecycle.ProcessLifecycleInitializer"
+74-->[androidx.lifecycle:lifecycle-process:2.4.0] /Users/austinlimanek/.gradle/caches/transforms-3/dd1064e81b3445eb173cd45521bfd469/transformed/lifecycle-process-2.4.0/AndroidManifest.xml:32:17-78
+75                android:value="androidx.startup" />
+75-->[androidx.lifecycle:lifecycle-process:2.4.0] /Users/austinlimanek/.gradle/caches/transforms-3/dd1064e81b3445eb173cd45521bfd469/transformed/lifecycle-process-2.4.0/AndroidManifest.xml:33:17-49
+76        </provider>
+77    </application>
+78
+79</manifest>
