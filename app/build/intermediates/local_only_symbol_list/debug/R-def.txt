@@ -1,0 +1,35 @@
+R_DEF: Internal format may change without notice
+local
+color black
+color purple_200
+color purple_500
+color purple_700
+color teal_200
+color teal_700
+color white
+drawable ic_launcher_background
+drawable ic_launcher_foreground
+id ActivityMainToAddTaskButton
+id ActivityMainToViewAllTasksButton
+id AddTaskSubmitButton
+id button2
+id editTextTextPersonName
+id editTextTextPersonName2
+id textView
+id viewAfterSubmit
+layout activity_add_task
+layout activity_main
+layout activity_view_all_tasks
+mipmap ic_launcher
+mipmap ic_launcher_round
+string app_name
+string back
+string body
+string submit
+string success
+string title
+string toAddTask
+string toViewAllTasks
+style Theme.MyApplication
+xml backup_rules
+xml data_extraction_rules
