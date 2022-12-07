@@ -2509,16 +2509,16 @@ drawable tooltip_frame_light
 id ALT
 id ActivityMainToAddTaskButton
 id ActivityMainToViewAllTasksButton
+id AddTaskSpinnerStatus
 id AddTaskSubmitButton
+id AddTaskTaskBody
+id AddTaskTaskName
 id BOTTOM_END
 id BOTTOM_START
 id CTRL
 id FUNCTION
-id GeneralButton
-id JavaButton
 id META
 id NO_DEBUG
-id PythonButton
 id SHIFT
 id SHOW_ALL
 id SHOW_PATH
@@ -2528,7 +2528,9 @@ id SaveUserNameButton
 id TOP_END
 id TOP_START
 id TaskDescription
+id TaskFragmentTextView
 id TaskName
+id TaskRecyclerView
 id UserName
 id UserNameText
 id UserSettings
@@ -2691,8 +2693,6 @@ id easeIn
 id easeInOut
 id easeOut
 id east
-id editTextTextPersonName
-id editTextTextPersonName2
 id edit_query
 id elastic
 id end
@@ -2981,7 +2981,6 @@ id unlabeled
 id up
 id useLogo
 id vertical_only
-id viewAfterSubmit
 id view_offset_helper
 id view_transition
 id view_tree_lifecycle_owner
@@ -3104,6 +3103,7 @@ layout design_navigation_menu
 layout design_navigation_menu_item
 layout design_text_input_end_icon
 layout design_text_input_start_icon
+layout fragment_task
 layout m3_alert_dialog
 layout m3_alert_dialog_actions
 layout m3_alert_dialog_title
@@ -3223,6 +3223,7 @@ string error_icon_content_description
 string exposed_dropdown_menu_content_description
 string fab_transformation_scrim_behavior
 string fab_transformation_sheet_behavior
+string hello_blank_fragment
 string hide_bottom_view_on_scroll_behavior
 string icon_content_description
 string item_view_role_description

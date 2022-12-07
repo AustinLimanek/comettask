@@ -1,8 +1,10 @@
-package com.task.CometTask;
+package com.task.CometTask.activities;
 
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
+
+import com.task.CometTask.R;
 
 public class ViewAllTasks extends AppCompatActivity {
 
