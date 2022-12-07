@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".AddTask"
+    tools:context=".activities.AddTask"
     tools:visibility="visible">
 
     <Button
@@ -15,45 +15,44 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editTextTextPersonName2"
+        app:layout_constraintTop_toBottomOf="@+id/AddTaskTaskBody"
         app:layout_constraintVertical_bias="0.498" />
 
     <EditText
-        android:id="@+id/editTextTextPersonName"
+        android:id="@+id/AddTaskTaskName"
         android:layout_width="208dp"
         android:layout_height="59dp"
         android:layout_marginTop="124dp"
         android:ems="10"
+        android:hint="Task Name"
         android:inputType="textPersonName"
-        android:text="@string/title"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.502"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <EditText
-        android:id="@+id/editTextTextPersonName2"
+        android:id="@+id/AddTaskTaskBody"
         android:layout_width="217dp"
         android:layout_height="57dp"
         android:layout_marginTop="20dp"
         android:ems="10"
+        android:hint="Task Body"
         android:inputType="textPersonName"
-        android:text="@string/body"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.525"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editTextTextPersonName" />
+        app:layout_constraintTop_toBottomOf="@+id/AddTaskTaskName" />
 
-    <TextView
-        android:id="@+id/viewAfterSubmit"
-        android:layout_width="158dp"
-        android:layout_height="28dp"
-        android:autoText="false"
-        app:layout_constraintBottom_toBottomOf="parent"
+    <Spinner
+        android:id="@+id/AddTaskSpinnerStatus"
+        android:layout_width="0dp"
+        android:layout_height="63dp"
+        android:layout_marginStart="1dp"
+        android:layout_marginTop="52dp"
+        android:layout_marginEnd="1dp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/AddTaskSubmitButton"
-        app:layout_constraintVertical_bias="0.263"
-        tools:visibility="visible" />
+        app:layout_constraintTop_toBottomOf="@+id/AddTaskTaskBody" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>
