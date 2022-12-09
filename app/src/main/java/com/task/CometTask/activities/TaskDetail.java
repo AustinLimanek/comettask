@@ -4,15 +4,22 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.util.Log;
 import android.widget.TextView;
 
+import com.amplifyframework.api.graphql.model.ModelQuery;
+import com.amplifyframework.core.Amplify;
 import com.amplifyframework.datastore.generated.model.Task;
 import com.task.CometTask.R;
 import com.task.CometTask.activities.MainActivity;
 
+import java.util.ArrayList;
+import java.util.List;
+import java.util.stream.Collectors;
+
 
 public class TaskDetail extends AppCompatActivity {
-
+    public static final String DATABASE_NAME = "task_db";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -36,10 +43,14 @@ public class TaskDetail extends AppCompatActivity {
         TextView taskViewLong = findViewById(R.id.TaskDescription);
         if(taskName != null) {
             taskView.setText(taskName);
-            String id = taskId;
-            //Task task = taskDatabase.taskDao().findById(id);
-            //String taskBody = task.getBody();
-            //if (!taskBody.equals("")) taskViewLong.setText(taskBody);
+            Amplify.API.query(
+                    ModelQuery.get(Task.class, taskId),
+                    success -> {
+                        final String taskBody = success.getData().getTaskDescription();
+                        if (!taskBody.equals("")) taskViewLong.setText(taskBody);
+                    },
+                    failure -> Log.w(DATABASE_NAME, "Failed to read description from database")
+            );
         }
         else {
             taskView.setText("No Task");
