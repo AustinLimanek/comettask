@@ -10,6 +10,11 @@
       "StackName": "amplify-comettask-dev-175613",
       "StackId": "arn:aws:cloudformation:us-west-2:586249689790:stack/amplify-comettask-dev-175613/aaf5e4f0-7764-11ed-9bcb-0a6753914ef3",
       "AmplifyAppId": "d2wzorj9npk9tw"
+    },
+    "categories": {
+      "api": {
+        "comettask": {}
+      }
     }
   }
 }

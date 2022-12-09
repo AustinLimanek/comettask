@@ -11,10 +11,10 @@ import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.amplifyframework.datastore.generated.model.Task;
 import com.task.CometTask.R;
 import com.task.CometTask.activities.MainActivity;
 import com.task.CometTask.activities.TaskDetail;
-import com.task.CometTask.models.Task;
 
 import java.util.List;
 
@@ -41,15 +41,14 @@ public class TaskRecyclerViewAdapter extends RecyclerView.Adapter<TaskRecyclerVi
     public void onBindViewHolder(@NonNull TaskViewHolder holder, int position) {
         // TODO Step 2-4: (In RecyclerViewAdapter.onBindViewHolder()) Bind data items to Fragments inside of ViewHolders
         TextView taskFragmentTextViewName = holder.itemView.findViewById(R.id.TaskFragmentTextView);
-        String mainTask = tasks.get(position).getName();
+        String mainTask = tasks.get(position).getTaskTitle();
         taskFragmentTextViewName.setText(position+1 + ". " + mainTask);
         // TODO Step 3-3: (In RecyclerViewAdapter.onBindViewHolder()) Create OnClickListener, make an Intent inside it, and call this Intent with an Extra to go to another Activity
         View taskItemView = holder.itemView;
         taskItemView.setOnClickListener(v -> {
             Intent goToTaskDetailIntent = new Intent(callingActivity, TaskDetail.class);
             goToTaskDetailIntent.putExtra(MainActivity.TASK_EXTRA_TAG, mainTask);
-            Long id = tasks.get(position).getId();
-            String mainTaskId = id.toString();
+            String mainTaskId = tasks.get(position).getId();
             goToTaskDetailIntent.putExtra(MainActivity.TASK_EXTRA_ID, mainTaskId);
             callingActivity.startActivity(goToTaskDetailIntent);
         });

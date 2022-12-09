@@ -1,90 +1,98 @@
 [
     {
-        "merged": "com.task.CometTask.app-merged_res-28:/mipmap-xxxhdpi_ic_launcher.webp.flat",
-        "source": "com.task.CometTask.app-main-30:/mipmap-xxxhdpi/ic_launcher.webp"
+        "merged": "com.task.CometTask.app-merged_res-38:/mipmap-xxxhdpi_ic_launcher.webp.flat",
+        "source": "com.task.CometTask.app-main-40:/mipmap-xxxhdpi/ic_launcher.webp"
     },
     {
-        "merged": "com.task.CometTask.app-merged_res-28:/mipmap-xxxhdpi_ic_launcher_round.webp.flat",
-        "source": "com.task.CometTask.app-main-30:/mipmap-xxxhdpi/ic_launcher_round.webp"
+        "merged": "com.task.CometTask.app-merged_res-38:/mipmap-hdpi_ic_launcher.webp.flat",
+        "source": "com.task.CometTask.app-main-40:/mipmap-hdpi/ic_launcher.webp"
     },
     {
-        "merged": "com.task.CometTask.app-merged_res-28:/mipmap-anydpi-v26_ic_launcher_round.xml.flat",
-        "source": "com.task.CometTask.app-main-30:/mipmap-anydpi-v26/ic_launcher_round.xml"
+        "merged": "com.task.CometTask.app-merged_res-38:/mipmap-xxhdpi_ic_launcher_round.webp.flat",
+        "source": "com.task.CometTask.app-main-40:/mipmap-xxhdpi/ic_launcher_round.webp"
     },
     {
-        "merged": "com.task.CometTask.app-merged_res-28:/mipmap-anydpi-v26_ic_launcher.xml.flat",
-        "source": "com.task.CometTask.app-main-30:/mipmap-anydpi-v26/ic_launcher.xml"
+        "merged": "com.task.CometTask.app-merged_res-38:/drawable_ic_launcher_background.xml.flat",
+        "source": "com.task.CometTask.app-main-40:/drawable/ic_launcher_background.xml"
     },
     {
-        "merged": "com.task.CometTask.app-merged_res-28:/xml_backup_rules.xml.flat",
-        "source": "com.task.CometTask.app-main-30:/xml/backup_rules.xml"
+        "merged": "com.task.CometTask.app-merged_res-38:/mipmap-hdpi_ic_launcher_round.webp.flat",
+        "source": "com.task.CometTask.app-main-40:/mipmap-hdpi/ic_launcher_round.webp"
     },
     {
-        "merged": "com.task.CometTask.app-merged_res-28:/drawable_ic_launcher_background.xml.flat",
-        "source": "com.task.CometTask.app-main-30:/drawable/ic_launcher_background.xml"
+        "merged": "com.task.CometTask.app-merged_res-38:/drawable-v24_ic_launcher_foreground.xml.flat",
+        "source": "com.task.CometTask.app-main-40:/drawable-v24/ic_launcher_foreground.xml"
     },
     {
-        "merged": "com.task.CometTask.app-merged_res-28:/layout_activity_main.xml.flat",
-        "source": "com.task.CometTask.app-main-30:/layout/activity_main.xml"
+        "merged": "com.task.CometTask.app-merged_res-38:/layout_activity_main.xml.flat",
+        "source": "com.task.CometTask.app-main-40:/layout/activity_main.xml"
     },
     {
-        "merged": "com.task.CometTask.app-merged_res-28:/xml_data_extraction_rules.xml.flat",
-        "source": "com.task.CometTask.app-main-30:/xml/data_extraction_rules.xml"
+        "merged": "com.task.CometTask.app-merged_res-38:/mipmap-anydpi-v26_ic_launcher_round.xml.flat",
+        "source": "com.task.CometTask.app-main-40:/mipmap-anydpi-v26/ic_launcher_round.xml"
     },
     {
-        "merged": "com.task.CometTask.app-merged_res-28:/layout_activity_task_detail.xml.flat",
-        "source": "com.task.CometTask.app-main-30:/layout/activity_task_detail.xml"
+        "merged": "com.task.CometTask.app-merged_res-38:/mipmap-xhdpi_ic_launcher_round.webp.flat",
+        "source": "com.task.CometTask.app-main-40:/mipmap-xhdpi/ic_launcher_round.webp"
     },
     {
-        "merged": "com.task.CometTask.app-merged_res-28:/mipmap-xxhdpi_ic_launcher.webp.flat",
-        "source": "com.task.CometTask.app-main-30:/mipmap-xxhdpi/ic_launcher.webp"
+        "merged": "com.task.CometTask.app-merged_res-38:/mipmap-mdpi_ic_launcher.webp.flat",
+        "source": "com.task.CometTask.app-main-40:/mipmap-mdpi/ic_launcher.webp"
     },
     {
-        "merged": "com.task.CometTask.app-merged_res-28:/mipmap-xhdpi_ic_launcher_round.webp.flat",
-        "source": "com.task.CometTask.app-main-30:/mipmap-xhdpi/ic_launcher_round.webp"
+        "merged": "com.task.CometTask.app-merged_res-38:/mipmap-xxhdpi_ic_launcher.webp.flat",
+        "source": "com.task.CometTask.app-main-40:/mipmap-xxhdpi/ic_launcher.webp"
     },
     {
-        "merged": "com.task.CometTask.app-merged_res-28:/layout_activity_view_all_tasks.xml.flat",
-        "source": "com.task.CometTask.app-main-30:/layout/activity_view_all_tasks.xml"
+        "merged": "com.task.CometTask.app-merged_res-38:/layout_activity_user_settings.xml.flat",
+        "source": "com.task.CometTask.app-main-40:/layout/activity_user_settings.xml"
     },
     {
-        "merged": "com.task.CometTask.app-merged_res-28:/layout_fragment_task.xml.flat",
-        "source": "com.task.CometTask.app-main-30:/layout/fragment_task.xml"
+        "merged": "com.task.CometTask.app-merged_res-38:/raw_awsconfiguration.json.flat",
+        "source": "com.task.CometTask.app-main-40:/raw/awsconfiguration.json"
     },
     {
-        "merged": "com.task.CometTask.app-merged_res-28:/layout_activity_user_settings.xml.flat",
-        "source": "com.task.CometTask.app-main-30:/layout/activity_user_settings.xml"
+        "merged": "com.task.CometTask.app-merged_res-38:/mipmap-anydpi-v26_ic_launcher.xml.flat",
+        "source": "com.task.CometTask.app-main-40:/mipmap-anydpi-v26/ic_launcher.xml"
     },
     {
-        "merged": "com.task.CometTask.app-merged_res-28:/mipmap-hdpi_ic_launcher.webp.flat",
-        "source": "com.task.CometTask.app-main-30:/mipmap-hdpi/ic_launcher.webp"
+        "merged": "com.task.CometTask.app-merged_res-38:/mipmap-mdpi_ic_launcher_round.webp.flat",
+        "source": "com.task.CometTask.app-main-40:/mipmap-mdpi/ic_launcher_round.webp"
     },
     {
-        "merged": "com.task.CometTask.app-merged_res-28:/layout_activity_add_task.xml.flat",
-        "source": "com.task.CometTask.app-main-30:/layout/activity_add_task.xml"
+        "merged": "com.task.CometTask.app-merged_res-38:/xml_data_extraction_rules.xml.flat",
+        "source": "com.task.CometTask.app-main-40:/xml/data_extraction_rules.xml"
     },
     {
-        "merged": "com.task.CometTask.app-merged_res-28:/mipmap-hdpi_ic_launcher_round.webp.flat",
-        "source": "com.task.CometTask.app-main-30:/mipmap-hdpi/ic_launcher_round.webp"
+        "merged": "com.task.CometTask.app-merged_res-38:/layout_activity_view_all_tasks.xml.flat",
+        "source": "com.task.CometTask.app-main-40:/layout/activity_view_all_tasks.xml"
     },
     {
-        "merged": "com.task.CometTask.app-merged_res-28:/mipmap-mdpi_ic_launcher_round.webp.flat",
-        "source": "com.task.CometTask.app-main-30:/mipmap-mdpi/ic_launcher_round.webp"
+        "merged": "com.task.CometTask.app-merged_res-38:/raw_amplifyconfiguration.json.flat",
+        "source": "com.task.CometTask.app-main-40:/raw/amplifyconfiguration.json"
     },
     {
-        "merged": "com.task.CometTask.app-merged_res-28:/drawable-v24_ic_launcher_foreground.xml.flat",
-        "source": "com.task.CometTask.app-main-30:/drawable-v24/ic_launcher_foreground.xml"
+        "merged": "com.task.CometTask.app-merged_res-38:/mipmap-xxxhdpi_ic_launcher_round.webp.flat",
+        "source": "com.task.CometTask.app-main-40:/mipmap-xxxhdpi/ic_launcher_round.webp"
     },
     {
-        "merged": "com.task.CometTask.app-merged_res-28:/mipmap-mdpi_ic_launcher.webp.flat",
-        "source": "com.task.CometTask.app-main-30:/mipmap-mdpi/ic_launcher.webp"
+        "merged": "com.task.CometTask.app-merged_res-38:/layout_activity_task_detail.xml.flat",
+        "source": "com.task.CometTask.app-main-40:/layout/activity_task_detail.xml"
     },
     {
-        "merged": "com.task.CometTask.app-merged_res-28:/mipmap-xxhdpi_ic_launcher_round.webp.flat",
-        "source": "com.task.CometTask.app-main-30:/mipmap-xxhdpi/ic_launcher_round.webp"
+        "merged": "com.task.CometTask.app-merged_res-38:/layout_fragment_task.xml.flat",
+        "source": "com.task.CometTask.app-main-40:/layout/fragment_task.xml"
     },
     {
-        "merged": "com.task.CometTask.app-merged_res-28:/mipmap-xhdpi_ic_launcher.webp.flat",
-        "source": "com.task.CometTask.app-main-30:/mipmap-xhdpi/ic_launcher.webp"
+        "merged": "com.task.CometTask.app-merged_res-38:/mipmap-xhdpi_ic_launcher.webp.flat",
+        "source": "com.task.CometTask.app-main-40:/mipmap-xhdpi/ic_launcher.webp"
+    },
+    {
+        "merged": "com.task.CometTask.app-merged_res-38:/layout_activity_add_task.xml.flat",
+        "source": "com.task.CometTask.app-main-40:/layout/activity_add_task.xml"
+    },
+    {
+        "merged": "com.task.CometTask.app-merged_res-38:/xml_backup_rules.xml.flat",
+        "source": "com.task.CometTask.app-main-40:/xml/backup_rules.xml"
     }
 ]

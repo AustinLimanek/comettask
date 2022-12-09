@@ -32,6 +32,8 @@ layout activity_view_all_tasks
 layout fragment_task
 mipmap ic_launcher
 mipmap ic_launcher_round
+raw amplifyconfiguration
+raw awsconfiguration
 string app_name
 string back
 string body

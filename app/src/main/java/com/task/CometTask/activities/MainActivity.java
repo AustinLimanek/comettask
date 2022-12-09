@@ -4,6 +4,8 @@ import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.preference.PreferenceManager;
+import android.util.Log;
+import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
@@ -11,20 +13,27 @@ import android.widget.TextView;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
-import androidx.room.Room;
 
+import com.amplifyframework.api.graphql.model.ModelMutation;
+import com.amplifyframework.api.graphql.model.ModelQuery;
+import com.amplifyframework.core.Amplify;
+import com.amplifyframework.datastore.generated.model.Task;
 import com.task.CometTask.R;
 import com.task.CometTask.adapter.TaskRecyclerViewAdapter;
-import com.task.CometTask.models.Task;
 
+import java.sql.Array;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.stream.Collectors;
 
 public class MainActivity extends AppCompatActivity {
 
-    //public static final String DATABASE_NAME = "task_db";
+    public static final String DATABASE_NAME = "task_db";
     public static final String TASK_EXTRA_TAG = "mainTask";
     public static final String TASK_EXTRA_ID = "mainTaskId";
+
+    TaskRecyclerViewAdapter adapter;
+    List<Task> tasks;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -32,16 +41,38 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
        setupBttns();
        setupUserProfileImageButton();
-
-
     }
 
     @Override
     protected void onResume() {
         super.onResume();
         setupGreeting();
-        setupRecyclerview();
+       setupRecyclerview();
         //setupTaskButtons();
+        Amplify.API.query(
+                ModelQuery.list(Task.class),
+                success -> {
+                    Log.i(DATABASE_NAME, "Read tasks successfully");
+                    List<Task> newTasks = new ArrayList<>();
+                    for (Task databaseSuperPet : success.getData()) {
+                        newTasks.add(databaseSuperPet);
+                    }
+                    newTasks = newTasks.stream().sorted((a, b) -> {
+                        int aTime = (int)(a.getCreatedAt().toDate().getTime()/10000);
+                        int bTime = (int)(b.getCreatedAt().toDate().getTime()/10000);
+                        if (aTime == bTime)
+                            return 0;
+                        else if (aTime > bTime)
+                            return 1;
+                        else return -1;
+                    }).collect(Collectors.toList());
+
+                    tasks.addAll(newTasks);
+
+                    runOnUiThread(() -> adapter.notifyDataSetChanged()); // since this runs asynchronously, the adapter may already have rendered, so we have to tell it to update
+                },
+                failure -> Log.e(DATABASE_NAME, "Failed to read Super Pets from database")
+        );
 
     }
 
@@ -73,13 +104,13 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void setupRecyclerview(){
-        List<Task> tasks = new ArrayList<>();
+        tasks = new ArrayList<>();
 
         RecyclerView taskRV = findViewById(R.id.TaskRecyclerView);
         RecyclerView.LayoutManager layoutManager = new LinearLayoutManager(this);
         taskRV.setLayoutManager(layoutManager);
 
-        TaskRecyclerViewAdapter adapter = new TaskRecyclerViewAdapter(tasks, this);
+        adapter = new TaskRecyclerViewAdapter(tasks, this);
         taskRV.setAdapter(adapter);
 
     }
