@@ -5,7 +5,7 @@ plugins {
 android {
     namespace 'com.task.CometTask'
     compileSdk 32
-
+    testOptions {animationsDisabled = true}
     defaultConfig {
         applicationId "com.task.CometTask"
         minSdk 26
