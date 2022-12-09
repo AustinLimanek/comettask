@@ -1,7 +1,7 @@
 # comettask
 A place to organize your tasks
 
-[Link the APK](app/build/intermediates/apk/debug/app-debug.apk)
+[Link to raw APK](app/build/intermediates/apk/debug/app-debug.apk)
 
 This is a basic rendering of the homescreen for my application.
 
