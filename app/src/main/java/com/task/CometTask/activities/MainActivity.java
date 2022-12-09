@@ -15,14 +15,14 @@ import androidx.room.Room;
 
 import com.task.CometTask.R;
 import com.task.CometTask.adapter.TaskRecyclerViewAdapter;
-import com.task.CometTask.database.TaskDatabase;
 import com.task.CometTask.models.Task;
 
+import java.util.ArrayList;
 import java.util.List;
 
 public class MainActivity extends AppCompatActivity {
-    TaskDatabase taskDatabase;
-    public static final String DATABASE_NAME = "task_db";
+
+    //public static final String DATABASE_NAME = "task_db";
     public static final String TASK_EXTRA_TAG = "mainTask";
     public static final String TASK_EXTRA_ID = "mainTaskId";
 
@@ -33,13 +33,6 @@ public class MainActivity extends AppCompatActivity {
        setupBttns();
        setupUserProfileImageButton();
 
-        taskDatabase = Room.databaseBuilder(
-                        getApplicationContext(),
-                        TaskDatabase.class,
-                        DATABASE_NAME)
-                .fallbackToDestructiveMigration() // If Room gets confused, it tosses your database; don't use this in production!
-                .allowMainThreadQueries()
-                .build();
 
     }
 
@@ -80,7 +73,7 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void setupRecyclerview(){
-        List<Task> tasks = taskDatabase.taskDao().findAll();
+        List<Task> tasks = new ArrayList<>();
 
         RecyclerView taskRV = findViewById(R.id.TaskRecyclerView);
         RecyclerView.LayoutManager layoutManager = new LinearLayoutManager(this);

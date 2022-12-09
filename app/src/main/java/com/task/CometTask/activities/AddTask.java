@@ -1,7 +1,7 @@
 package com.task.CometTask.activities;
 
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.room.Room;
+
 
 import android.os.Bundle;
 import android.widget.ArrayAdapter;
@@ -11,14 +11,13 @@ import android.widget.Spinner;
 import android.widget.Toast;
 
 import com.task.CometTask.R;
-import com.task.CometTask.database.TaskDatabase;
+
 import com.task.CometTask.models.Task;
 
 import java.util.Date;
 
 public class AddTask extends AppCompatActivity {
 
-    TaskDatabase taskDatabase;
     Spinner taskStatusSpinner;
 
     @Override
@@ -27,14 +26,7 @@ public class AddTask extends AppCompatActivity {
         setContentView(R.layout.activity_add_task);
 
         taskStatusSpinner = findViewById(R.id.AddTaskSpinnerStatus);
-        //TODO Step: 5-6 instantiate the DB wherever you need it
-        taskDatabase = Room.databaseBuilder(
-                        getApplicationContext(),
-                        TaskDatabase.class,
-                        MainActivity.DATABASE_NAME)
-                .fallbackToDestructiveMigration() // If Room gets confused, it tosses your database; don't use this in production!
-                .allowMainThreadQueries()
-                .build();
+
         setupTypeSpinner();
         setupSaveBttn();
     }
@@ -62,7 +54,7 @@ public class AddTask extends AppCompatActivity {
                     new Date()
             );
 
-            taskDatabase.taskDao().insertASuperPet(newTask);
+
             Toast.makeText(this, "Task Saved!", Toast.LENGTH_SHORT).show();
 
         });

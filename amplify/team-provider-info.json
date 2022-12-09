@@ -1,0 +1,15 @@
+{
+  "dev": {
+    "awscloudformation": {
+      "AuthRoleName": "amplify-comettask-dev-175613-authRole",
+      "UnauthRoleArn": "arn:aws:iam::586249689790:role/amplify-comettask-dev-175613-unauthRole",
+      "AuthRoleArn": "arn:aws:iam::586249689790:role/amplify-comettask-dev-175613-authRole",
+      "Region": "us-west-2",
+      "DeploymentBucketName": "amplify-comettask-dev-175613-deployment",
+      "UnauthRoleName": "amplify-comettask-dev-175613-unauthRole",
+      "StackName": "amplify-comettask-dev-175613",
+      "StackId": "arn:aws:cloudformation:us-west-2:586249689790:stack/amplify-comettask-dev-175613/aaf5e4f0-7764-11ed-9bcb-0a6753914ef3",
+      "AmplifyAppId": "d2wzorj9npk9tw"
+    }
+  }
+}
