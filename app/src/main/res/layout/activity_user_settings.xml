@@ -37,4 +37,19 @@
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
+
+    <Spinner
+        android:id="@+id/spinner3"
+        android:layout_width="229dp"
+        android:layout_height="36dp"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="86dp"
+        android:layout_marginEnd="24dp"
+        android:layout_marginBottom="130dp"
+        app:layout_constraintBottom_toTopOf="@+id/SaveUserNameButton"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.432"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/UserNameText" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>

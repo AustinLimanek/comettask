@@ -1,6 +1,6 @@
 # comettask
 A place to organize your tasks
 
-This is a basic rendering of the homescreen for my application.
+This is a basic rendering of the home screen for my application.
 
-![The Home Screen](screenshots/day3.png)
+![The Home Screen](screenshots/withteams.png)

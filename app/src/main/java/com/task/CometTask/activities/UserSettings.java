@@ -5,16 +5,31 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.preference.PreferenceManager;
+import android.util.Log;
+import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.Spinner;
+import android.widget.TextView;
 import android.widget.Toast;
 
+import com.amplifyframework.api.graphql.model.ModelQuery;
+import com.amplifyframework.core.Amplify;
+import com.amplifyframework.datastore.generated.model.Team;
 import com.task.CometTask.R;
+
+import java.util.ArrayList;
+import java.util.List;
+import java.util.concurrent.CompletableFuture;
 
 public class UserSettings extends AppCompatActivity {
 
     SharedPreferences preferences;
+    public final static String TAG = "AddTaskActivity";
     public static final String USERNAME_TAG = "username";
+    public static final String TEAM_TAG = "teamname";
+    Spinner settingsTeamSpinner;
+    CompletableFuture<List<Team>> teamFuture = new CompletableFuture<>();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -22,6 +37,30 @@ public class UserSettings extends AppCompatActivity {
         setContentView(R.layout.activity_user_settings);
         preferences = PreferenceManager.getDefaultSharedPreferences(this);
         saveValuesToSharedPrefs();
+
+        TextView preName = (TextView) findViewById(R.id.UserNameText);
+        preName.setText(preferences.getString(USERNAME_TAG, "user"));
+
+        settingsTeamSpinner = findViewById(R.id.spinner3);
+
+        Amplify.API.query(
+                ModelQuery.list(Team.class),
+                success -> {
+                    Log.i(TAG, "Read Team Successful");
+                    ArrayList<String> teamNames = new ArrayList<>();
+                    ArrayList<Team> teams = new ArrayList<>();
+                    for(Team team : success.getData()){
+                        teamNames.add(team.getName());
+                        teams.add(team);
+                    }
+                    teamFuture.complete(teams);
+                    runOnUiThread(() -> setupSettingsTeamSpinner(teamNames));
+                },
+                failure -> {
+                    teamFuture.complete(null);
+                    Log.w(TAG, "Did not read teams successfully from database");
+                }
+        );
     }
 
     public void saveValuesToSharedPrefs(){
@@ -30,11 +69,22 @@ public class UserSettings extends AppCompatActivity {
         Button saveButton = this.findViewById(R.id.SaveUserNameButton);
         saveButton.setOnClickListener(v -> {
             String usernameText = ((EditText) findViewById(R.id.UserNameText)).getText().toString();
+            String teamName = settingsTeamSpinner.getSelectedItem().toString();
 
             preferenceEditor.putString(USERNAME_TAG, usernameText);
+            preferenceEditor.putString(TEAM_TAG, teamName);
             preferenceEditor.apply(); // TODO: Nothing saves unless you do this, DONT FORGET!!
 
             Toast.makeText(this, "Username Saved!", Toast.LENGTH_SHORT).show();
         });
+    }
+
+    public void setupSettingsTeamSpinner(ArrayList<String> teamNames){
+
+        settingsTeamSpinner.setAdapter(new ArrayAdapter<>(
+                this,
+                android.R.layout.simple_spinner_item,
+                teamNames
+        ));
     }
 }
