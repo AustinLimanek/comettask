@@ -49,6 +49,10 @@ public class MainActivity extends AppCompatActivity {
         setupGreeting();
        setupRecyclerview();
         //setupTaskButtons();
+
+        SharedPreferences preferences = PreferenceManager.getDefaultSharedPreferences(this);
+        String teamName = preferences.getString(UserSettings.TEAM_TAG, "No Team");
+
         Amplify.API.query(
                 ModelQuery.list(Task.class),
                 success -> {
@@ -65,7 +69,7 @@ public class MainActivity extends AppCompatActivity {
                         else if (aTime > bTime)
                             return 1;
                         else return -1;
-                    }).collect(Collectors.toList());
+                    }).filter(task -> task.getTeam().getName().equals(teamName)).collect(Collectors.toList());
 
                     tasks.addAll(newTasks);
 
@@ -99,7 +103,15 @@ public class MainActivity extends AppCompatActivity {
     public void setupGreeting(){
         SharedPreferences preferences = PreferenceManager.getDefaultSharedPreferences(this);
         String username = preferences.getString(UserSettings.USERNAME_TAG, "No username");
-        String userNameMessage = username.substring(0,1).toUpperCase() + username.substring(1).toLowerCase() + "'s" + " tasks";
+        String userNameMessage;
+        if(username.length() > 0){
+            userNameMessage = username.substring(0,1).toUpperCase() + username.substring(1).toLowerCase() + "'s" + " tasks";
+        }
+        else{
+            userNameMessage = "No username";
+        }
+        String teamName = preferences.getString(UserSettings.TEAM_TAG, "No Team");
+        userNameMessage += ": Team " + teamName;
         ((TextView)findViewById(R.id.UserName)).setText(userNameMessage);
     }
 

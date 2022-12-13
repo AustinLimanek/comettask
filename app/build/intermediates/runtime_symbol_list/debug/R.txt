@@ -2992,6 +2992,7 @@ int id snapMargins 0x7f0801b8
 int id south 0x7f0801b9
 int id spacer 0x7f0801ba
 int id special_effects_controller_view_tag 0x7f0801bb
+int id spinner3 0x7f08021e
 int id spline 0x7f0801bc
 int id split_action_bar 0x7f0801bd
 int id spread 0x7f0801be
@@ -3028,6 +3029,7 @@ int id tag_transition_group 0x7f0801dc
 int id tag_unhandled_key_event_manager 0x7f0801dd
 int id tag_unhandled_key_listeners 0x7f0801de
 int id tag_window_insets_animation_callback 0x7f0801df
+int id teamSpinner 0x7f08021d
 int id test_checkbox_android_button_tint 0x7f0801e0
 int id test_checkbox_app_button_tint 0x7f0801e1
 int id test_radiobutton_android_button_tint 0x7f0801e2

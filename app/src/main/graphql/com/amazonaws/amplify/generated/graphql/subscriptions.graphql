@@ -1,10 +1,80 @@
 # this is an auto generated file. This will be overwritten
+subscription OnCreateTeam($filter: ModelSubscriptionTeamFilterInput) {
+  onCreateTeam(filter: $filter) {
+    id
+    name
+    tasks {
+      items {
+        id
+        taskTitle
+        taskDescription
+        teamID
+        state
+        createdAt
+        updatedAt
+      }
+      nextToken
+    }
+    createdAt
+    updatedAt
+  }
+}
+subscription OnUpdateTeam($filter: ModelSubscriptionTeamFilterInput) {
+  onUpdateTeam(filter: $filter) {
+    id
+    name
+    tasks {
+      items {
+        id
+        taskTitle
+        taskDescription
+        teamID
+        state
+        createdAt
+        updatedAt
+      }
+      nextToken
+    }
+    createdAt
+    updatedAt
+  }
+}
+subscription OnDeleteTeam($filter: ModelSubscriptionTeamFilterInput) {
+  onDeleteTeam(filter: $filter) {
+    id
+    name
+    tasks {
+      items {
+        id
+        taskTitle
+        taskDescription
+        teamID
+        state
+        createdAt
+        updatedAt
+      }
+      nextToken
+    }
+    createdAt
+    updatedAt
+  }
+}
 subscription OnCreateTask($filter: ModelSubscriptionTaskFilterInput) {
   onCreateTask(filter: $filter) {
     id
     taskTitle
     taskDescription
+    teamID
     state
+    team {
+      id
+      name
+      tasks {
+        nextToken
+      }
+      createdAt
+      updatedAt
+    }
     createdAt
     updatedAt
   }
@@ -14,7 +84,17 @@ subscription OnUpdateTask($filter: ModelSubscriptionTaskFilterInput) {
     id
     taskTitle
     taskDescription
+    teamID
     state
+    team {
+      id
+      name
+      tasks {
+        nextToken
+      }
+      createdAt
+      updatedAt
+    }
     createdAt
     updatedAt
   }
@@ -24,7 +104,17 @@ subscription OnDeleteTask($filter: ModelSubscriptionTaskFilterInput) {
     id
     taskTitle
     taskDescription
+    teamID
     state
+    team {
+      id
+      name
+      tasks {
+        nextToken
+      }
+      createdAt
+      updatedAt
+    }
     createdAt
     updatedAt
   }

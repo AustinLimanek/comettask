@@ -24,6 +24,8 @@ id UserName
 id UserNameText
 id UserSettings
 id button2
+id spinner3
+id teamSpinner
 layout activity_add_task
 layout activity_main
 layout activity_task_detail
