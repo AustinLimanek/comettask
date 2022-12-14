@@ -10,10 +10,10 @@
         android:id="@+id/UserName"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="48dp"
+        android:layout_marginTop="68dp"
         android:text="Hello World!"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.459"
+        app:layout_constraintHorizontal_bias="0.458"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -30,6 +30,7 @@
         app:layout_constraintHorizontal_bias="0.74"
         app:layout_constraintStart_toEndOf="@+id/UserName"
         app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.26999998"
         app:srcCompat="@android:drawable/ic_menu_preferences"
         tools:ignore="SpeakableTextPresentCheck" />
 
@@ -63,5 +64,60 @@
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/UserName" />
+
+    <Button
+        android:id="@+id/MainSignIn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginBottom="60dp"
+        android:text="Sign in"
+        app:layout_constraintBottom_toTopOf="@+id/TaskRecyclerView"
+        app:layout_constraintEnd_toStartOf="@+id/MainSignUp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/MainSignUp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="123dp"
+        android:layout_marginBottom="20dp"
+        android:text="Sign up"
+        app:layout_constraintBottom_toTopOf="@+id/UserName"
+        app:layout_constraintEnd_toStartOf="@+id/UserSettings"
+        app:layout_constraintStart_toEndOf="@+id/MainSignIn"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/mainSignOutButton"
+        android:layout_width="114dp"
+        android:layout_height="48dp"
+        android:layout_marginStart="258dp"
+        android:layout_marginTop="45dp"
+        android:layout_marginEnd="16dp"
+        android:text="Sign out"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintDimensionRatio="1:1"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/ActivityMainToViewAllTasksButton" />
+
+    <TextView
+        android:id="@+id/MainShowTextEmail"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="95dp"
+        android:layout_marginTop="50dp"
+        android:layout_marginEnd="175dp"
+        android:layout_marginBottom="8dp"
+        android:text="Not Signed In"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/mainSignOutButton"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/ActivityMainToAddTaskButton"
+        app:layout_constraintVertical_bias="0.75" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

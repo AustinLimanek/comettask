@@ -19,7 +19,12 @@
         <intent>
             <action android:name="android.support.customtabs.action.CustomTabsService" />
         </intent>
-    </queries> <!-- Permission will be merged into the manifest of the hosting app. -->
+    </queries>
+
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" /> <!-- Permission will be merged into the manifest of the hosting app. -->
     <!-- Is required to launch foreground extraction service for targetSdkVersion 28+. -->
     <uses-permission android:name="android.permission.FOREGROUND_SERVICE" />
 
@@ -37,6 +42,27 @@
         android:supportsRtl="true"
         android:testOnly="true"
         android:theme="@style/Theme.MyApplication" >
+        <activity
+            android:name="com.task.CometTask.activities.SignInPage"
+            android:exported="false" >
+            <meta-data
+                android:name="android.app.lib_name"
+                android:value="" />
+        </activity>
+        <activity
+            android:name="com.task.CometTask.activities.verificationPage"
+            android:exported="false" >
+            <meta-data
+                android:name="android.app.lib_name"
+                android:value="" />
+        </activity>
+        <activity
+            android:name="com.task.CometTask.activities.SignUpActivity"
+            android:exported="false" >
+            <meta-data
+                android:name="android.app.lib_name"
+                android:value="" />
+        </activity>
         <activity
             android:name="com.task.CometTask.activities.TaskDetail"
             android:exported="false" >

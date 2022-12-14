@@ -1,7 +1,7 @@
 {
     "logs": [
         {
-            "outputFile": "com.task.CometTask.app-mergeDebugResources-36:/values-th/values-th.xml",
+            "outputFile": "com.task.CometTask.app-mergeDebugResources-38:/values-th/values-th.xml",
             "map": [
                 {
                     "source": "/Users/austinlimanek/.gradle/caches/transforms-3/86cc0bfc30c4f5c99c8ae20b266f57c9/transformed/navigation-ui-2.3.4/res/values-th/values-th.xml",

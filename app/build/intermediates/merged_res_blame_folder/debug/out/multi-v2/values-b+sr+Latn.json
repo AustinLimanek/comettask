@@ -1,7 +1,7 @@
 {
     "logs": [
         {
-            "outputFile": "com.task.CometTask.app-mergeDebugResources-36:/values-b+sr+Latn/values-b+sr+Latn.xml",
+            "outputFile": "com.task.CometTask.app-mergeDebugResources-38:/values-b+sr+Latn/values-b+sr+Latn.xml",
             "map": [
                 {
                     "source": "/Users/austinlimanek/.gradle/caches/transforms-3/e40bb6f00ecba2d558cafa18a14c4f93/transformed/navigation-dynamic-features-fragment-2.3.4/res/values-b+sr+Latn/values-b+sr+Latn.xml",
