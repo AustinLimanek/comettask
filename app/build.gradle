@@ -30,6 +30,13 @@ android {
 
 dependencies {
 
+    implementation 'com.amplifyframework:aws-auth-cognito:2.0.0'
+
+    implementation 'com.amazonaws:aws-android-sdk-core:2.16.+'
+    implementation 'com.amazonaws:aws-android-sdk-cognito:2.16.+'
+    implementation 'com.amazonaws:aws-android-sdk-s3:2.16.+'
+    implementation 'com.amazonaws:aws-android-sdk-mobile-client:2.16.+'
+
     implementation 'com.amplifyframework:aws-api:2.0.0'
     implementation 'com.amplifyframework:aws-datastore:2.0.0'
     implementation "androidx.lifecycle:lifecycle-viewmodel:2.5.1"

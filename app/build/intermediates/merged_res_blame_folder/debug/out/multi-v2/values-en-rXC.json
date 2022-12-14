@@ -1,7 +1,7 @@
 {
     "logs": [
         {
-            "outputFile": "com.task.CometTask.app-mergeDebugResources-36:/values-en-rXC/values-en-rXC.xml",
+            "outputFile": "com.task.CometTask.app-mergeDebugResources-38:/values-en-rXC/values-en-rXC.xml",
             "map": [
                 {
                     "source": "/Users/austinlimanek/.gradle/caches/transforms-3/d1182ac9010646c74e629f347fb2d565/transformed/browser-1.4.0/res/values-en-rXC/values-en-rXC.xml",

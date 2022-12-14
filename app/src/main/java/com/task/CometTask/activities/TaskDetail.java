@@ -26,8 +26,6 @@ public class TaskDetail extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_task_detail);
 
-
-
         consumeProductExtra();
     }
 
