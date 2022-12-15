@@ -28,6 +28,7 @@ id UserNameText
 id UserSettings
 id addImageButton
 id button2
+id imageView
 id imageViewContent
 id mainSignOutButton
 id signInButton

@@ -115,35 +115,7 @@ public class AddTask extends AppCompatActivity {
 
         submitButton.setOnClickListener(v -> {
 
-            String selectedTeamName = teamSpinner.getSelectedItem().toString();
-            List<Team> teams = null;
-            try{
-                teams = teamFuture.get();
-            }
-            catch(InterruptedException interruptedException){
-                Log.e(TAG, "InterruptedExcepetion while getting teams");
-                Thread.currentThread().interrupt();
-            }
-            catch(ExecutionException executionException){
-                Log.e(TAG, "ExecutionException while getting teams");
-            }
-
-            Team selectedTeam = teams.stream().filter(team -> team.getName().equals(selectedTeamName)).findAny().orElseThrow(RuntimeException::new);
-
-            Task newTask = Task.builder()
-                    .taskTitle(((EditText)findViewById(R.id.AddTaskTaskName)).getText().toString())
-                    .taskDescription(((EditText)findViewById(R.id.AddTaskTaskBody)).getText().toString())
-                    .state((TaskStateEnum)taskStatusSpinner.getSelectedItem())
-                    .team(selectedTeam)
-                    .build();
-
-            Amplify.API.mutate(
-                    ModelMutation.create(newTask),
-                    success -> Log.i(TAG, "AddTaskActivity.onCreate(): made a task successfully!"),
-                    failure -> Log.w(TAG, "AddTaskActivity.onCreate(): failed to make a task", failure)
-            );
-
-            Toast.makeText(this, "Task Saved!", Toast.LENGTH_SHORT).show();
+            saveTask();
 
         });
     }
@@ -197,6 +169,7 @@ public class AddTask extends AppCompatActivity {
                     InputStream pickedImageInputStreamCopy = null;
                     try{
                         pickedImageInputStreamCopy = getContentResolver().openInputStream(pickedImageFileUri);
+                        Log.i(TAG, "This is the uri" + pickedImageFileUri.toString());
                     }catch(FileNotFoundException fileNotFoundException){
                         Log.e(TAG, "could not find file" + fileNotFoundException.getMessage(), fileNotFoundException);
                     }
@@ -207,6 +180,36 @@ public class AddTask extends AppCompatActivity {
     }
 
     private void saveTask(){
+        String selectedTeamName = teamSpinner.getSelectedItem().toString();
+        List<Team> teams = null;
+        try{
+            teams = teamFuture.get();
+        }
+        catch(InterruptedException interruptedException){
+            Log.e(TAG, "InterruptedExcepetion while getting teams");
+            Thread.currentThread().interrupt();
+        }
+        catch(ExecutionException executionException){
+            Log.e(TAG, "ExecutionException while getting teams");
+        }
+
+        Team selectedTeam = teams.stream().filter(team -> team.getName().equals(selectedTeamName)).findAny().orElseThrow(RuntimeException::new);
+
+        Task newTask = Task.builder()
+                .taskTitle(((EditText)findViewById(R.id.AddTaskTaskName)).getText().toString())
+                .taskDescription(((EditText)findViewById(R.id.AddTaskTaskBody)).getText().toString())
+                .state((TaskStateEnum)taskStatusSpinner.getSelectedItem())
+                .team(selectedTeam)
+                .s3ImageKey(s3ImageKey)
+                .build();
+
+        Amplify.API.mutate(
+                ModelMutation.create(newTask),
+                success -> Log.i(TAG, "AddTaskActivity.onCreate(): made a task successfully!"),
+                failure -> Log.w(TAG, "AddTaskActivity.onCreate(): failed to make a task", failure)
+        );
+
+        Toast.makeText(this, "Task Saved!", Toast.LENGTH_SHORT).show();
 
     }
 

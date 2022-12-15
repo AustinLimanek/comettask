@@ -2,5 +2,5 @@
   "AppSyncApiName": "comettask",
   "DynamoDBBillingMode": "PAY_PER_REQUEST",
   "DynamoDBEnableServerSideEncryption": false,
-  "AuthModeLastUpdated": "2022-12-14T18:29:20.047Z"
+  "AuthModeLastUpdated": "2022-12-15T01:35:55.076Z"
 }

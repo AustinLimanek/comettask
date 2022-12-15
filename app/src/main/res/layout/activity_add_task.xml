@@ -84,8 +84,14 @@
         android:id="@+id/imageViewContent"
         android:layout_width="107dp"
         android:layout_height="78dp"
-        app:srcCompat="@drawable/amplify_storage_transfer_notification_icon"
-        tools:layout_editor_absoluteX="2dp"
-        tools:layout_editor_absoluteY="1dp" />
+        android:layout_marginStart="2dp"
+        android:layout_marginTop="1dp"
+        android:layout_marginEnd="230dp"
+        android:layout_marginBottom="45dp"
+        app:layout_constraintBottom_toTopOf="@+id/AddTaskTaskName"
+        app:layout_constraintEnd_toStartOf="@+id/addImageButton"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/amplify_storage_transfer_notification_icon" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
