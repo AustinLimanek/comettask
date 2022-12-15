@@ -26,7 +26,9 @@ id TaskRecyclerView
 id UserName
 id UserNameText
 id UserSettings
+id addImageButton
 id button2
+id imageViewContent
 id mainSignOutButton
 id signInButton
 id signInTextEmail

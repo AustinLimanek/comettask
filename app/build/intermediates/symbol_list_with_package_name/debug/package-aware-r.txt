@@ -1196,6 +1196,9 @@ attr yearStyle
 attr yearTodayStyle
 bool abc_action_bar_embed_tabs
 bool abc_config_actionMenuItemAllCaps
+bool enable_system_alarm_service_default
+bool enable_system_foreground_service_default
+bool enable_system_job_service_default
 bool m3_sys_typescale_body_large_text_all_caps
 bool m3_sys_typescale_body_medium_text_all_caps
 bool m3_sys_typescale_body_small_text_all_caps
@@ -1212,6 +1215,7 @@ bool m3_sys_typescale_title_large_text_all_caps
 bool m3_sys_typescale_title_medium_text_all_caps
 bool m3_sys_typescale_title_small_text_all_caps
 bool mtrl_btn_textappearance_all_caps
+bool workmanager_test_configuration
 color abc_background_cache_hint_selector_material_dark
 color abc_background_cache_hint_selector_material_light
 color abc_btn_colored_borderless_text_material
@@ -2480,6 +2484,7 @@ drawable abc_textfield_search_activated_mtrl_alpha
 drawable abc_textfield_search_default_mtrl_alpha
 drawable abc_textfield_search_material
 drawable abc_vector_test
+drawable amplify_storage_transfer_notification_icon
 drawable avd_hide_password
 drawable avd_show_password
 drawable btn_checkbox_checked_mtrl
@@ -2640,6 +2645,7 @@ id action_text
 id actions
 id activity_chooser_view_content
 id add
+id addImageButton
 id alertTitle
 id aligned
 id all
@@ -2809,6 +2815,7 @@ id ifRoom
 id ignore
 id ignoreRequest
 id image
+id imageViewContent
 id immediateStop
 id included
 id info
@@ -3346,6 +3353,9 @@ string abc_shareactionprovider_share_with
 string abc_shareactionprovider_share_with_application
 string abc_toolbar_collapse_description
 string all_logs
+string amplify_storage_notification_channel_id
+string amplify_storage_notification_channel_name
+string amplify_storage_notification_title
 string androidx_startup
 string app_name
 string appbar_scrolling_view_behavior
