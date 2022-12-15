@@ -1,7 +1,7 @@
 {
     "logs": [
         {
-            "outputFile": "com.task.CometTask.app-mergeDebugResources-38:/values-uk/values-uk.xml",
+            "outputFile": "com.task.CometTask.app-mergeDebugResources-41:/values-uk/values-uk.xml",
             "map": [
                 {
                     "source": "/Users/austinlimanek/.gradle/caches/transforms-3/d1182ac9010646c74e629f347fb2d565/transformed/browser-1.4.0/res/values-uk/values-uk.xml",

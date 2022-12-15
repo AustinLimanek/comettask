@@ -10,6 +10,7 @@ query GetTeam($id: ID!) {
         taskDescription
         teamID
         state
+        s3ImageKey
         createdAt
         updatedAt
       }
@@ -53,6 +54,7 @@ query GetTask($id: ID!) {
       createdAt
       updatedAt
     }
+    s3ImageKey
     createdAt
     updatedAt
   }
@@ -75,6 +77,7 @@ query ListTasks(
         createdAt
         updatedAt
       }
+      s3ImageKey
       createdAt
       updatedAt
     }
@@ -109,6 +112,7 @@ query TasksByTeamIDAndTaskTitle(
         createdAt
         updatedAt
       }
+      s3ImageKey
       createdAt
       updatedAt
     }

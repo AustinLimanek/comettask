@@ -3,8 +3,12 @@ package com.task.CometTask.activities;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
+import android.graphics.Bitmap;
+import android.graphics.BitmapFactory;
+import android.net.Uri;
 import android.os.Bundle;
 import android.util.Log;
+import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.amplifyframework.api.graphql.model.ModelQuery;
@@ -13,6 +17,9 @@ import com.amplifyframework.datastore.generated.model.Task;
 import com.task.CometTask.R;
 import com.task.CometTask.activities.MainActivity;
 
+import java.io.File;
+import java.io.FileNotFoundException;
+import java.io.InputStream;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.stream.Collectors;
@@ -20,6 +27,9 @@ import java.util.stream.Collectors;
 
 public class TaskDetail extends AppCompatActivity {
     public static final String DATABASE_NAME = "task_db";
+    public static final String TAG = "TaskDetailPage";
+
+    String fileName;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -27,6 +37,16 @@ public class TaskDetail extends AppCompatActivity {
         setContentView(R.layout.activity_task_detail);
 
         consumeProductExtra();
+    }
+
+    @Override
+    protected void onResume() {
+        super.onResume();
+        try {
+            setupTaskImage();
+        } catch (FileNotFoundException e) {
+            e.printStackTrace();
+        }
     }
 
     public void consumeProductExtra(){
@@ -45,7 +65,9 @@ public class TaskDetail extends AppCompatActivity {
                     ModelQuery.get(Task.class, taskId),
                     success -> {
                         final String taskBody = success.getData().getTaskDescription();
+                        fileName = success.getData().getS3ImageKey();
                         if (!taskBody.equals("")) taskViewLong.setText(taskBody);
+                        Log.i(TAG, "successfully looked up task. This is the fileName: "+ fileName);
                     },
                     failure -> Log.w(DATABASE_NAME, "Failed to read description from database")
             );
@@ -53,6 +75,20 @@ public class TaskDetail extends AppCompatActivity {
         else {
             taskView.setText("No Task");
         }
+    }
+
+    public void setupTaskImage() throws FileNotFoundException {
+            Amplify.Storage.downloadFile(
+                    "charmander.png",
+                    new File(getApplicationContext().getFilesDir() + "/download.txt"),
+                    result -> {
+                        ImageView taskImage = findViewById(R.id.imageView);
+                        Bitmap bitmap = BitmapFactory.decodeFile(result.getFile().getAbsolutePath());
+                        taskImage.setImageBitmap(bitmap);
+                        Log.i("MyAmplifyApp", "Successfully downloaded: " + fileName + " Please tells me this is true: ");
+                    },
+                    error -> Log.e("MyAmplifyApp", "Download Failure " + fileName, error)
+            );
     }
 
 }
