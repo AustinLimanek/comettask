@@ -97,7 +97,7 @@ public class AddTask extends AppCompatActivity {
         setUpAddImageButton();
     }
 
-    public void initTeams(){
+    private void initTeams(){
 
         Team blue = Team.builder()
                 .name("blue")
