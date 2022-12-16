@@ -2,6 +2,7 @@ package com.task.CometTask.activities;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.preference.PreferenceManager;
@@ -13,6 +14,7 @@ import android.widget.Spinner;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.amplifyframework.api.graphql.model.ModelMutation;
 import com.amplifyframework.api.graphql.model.ModelQuery;
 import com.amplifyframework.core.Amplify;
 import com.amplifyframework.datastore.generated.model.Team;
@@ -49,9 +51,15 @@ public class UserSettings extends AppCompatActivity {
                     Log.i(TAG, "Read Team Successful");
                     ArrayList<String> teamNames = new ArrayList<>();
                     ArrayList<Team> teams = new ArrayList<>();
+                    int count = 0;
                     for(Team team : success.getData()){
                         teamNames.add(team.getName());
                         teams.add(team);
+                        count += 1;
+                    }
+                    if(count < 1){
+                        initTeams();
+                        startActivity(new Intent(this, UserSettings.class));
                     }
                     teamFuture.complete(teams);
                     runOnUiThread(() -> setupSettingsTeamSpinner(teamNames));
@@ -61,6 +69,36 @@ public class UserSettings extends AppCompatActivity {
                     Log.w(TAG, "Did not read teams successfully from database");
                 }
         );
+    }
+
+    private void initTeams() {
+        Team blue = Team.builder()
+                .name("blue")
+                .build();
+        Amplify.API.mutate(
+                ModelMutation.create(blue),
+                achieved -> {
+                },
+                failure -> {
+                });
+        Team red = Team.builder()
+                .name("red")
+                .build();
+        Amplify.API.mutate(
+                ModelMutation.create(red),
+                achieved -> {
+                },
+                failure -> {
+                });
+        Team green = Team.builder()
+                .name("green")
+                .build();
+        Amplify.API.mutate(
+                ModelMutation.create(green),
+                achieved -> {
+                },
+                failure -> {
+                });
     }
 
     public void saveValuesToSharedPrefs(){

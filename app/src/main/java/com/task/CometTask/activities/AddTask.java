@@ -70,10 +70,17 @@ public class AddTask extends AppCompatActivity {
                     Log.i(TAG, "Read Team Successful");
                     ArrayList<String> teamNames = new ArrayList<>();
                     ArrayList<Team> teams = new ArrayList<>();
+                    int count = 0;
                     for(Team team : success.getData()){
                         teamNames.add(team.getName());
                         teams.add(team);
+                        count += 1;
                     }
+                    if(count < 1){
+                        initTeams();
+                        startActivity(new Intent(this, AddTask.class));
+                    }
+
                     teamFuture.complete(teams);
                     runOnUiThread(() -> setupTeamSpinner(teamNames));
                 },
@@ -88,6 +95,38 @@ public class AddTask extends AppCompatActivity {
         setupTypeSpinner();
         setupSaveBttn();
         setUpAddImageButton();
+    }
+
+    public void initTeams(){
+
+        Team blue = Team.builder()
+                .name("blue")
+                .build();
+        Amplify.API.mutate(
+                ModelMutation.create(blue),
+                achieved -> {
+                },
+                failure -> {
+                });
+        Team red = Team.builder()
+                .name("red")
+                .build();
+        Amplify.API.mutate(
+                ModelMutation.create(red),
+                achieved -> {
+                },
+                failure -> {
+                });
+        Team green = Team.builder()
+                .name("green")
+                .build();
+        Amplify.API.mutate(
+                ModelMutation.create(green),
+                achieved -> {
+                },
+                failure -> {
+                });
+
     }
 
     public void setupTeamSpinner(ArrayList<String> teamNames){
@@ -112,22 +151,16 @@ public class AddTask extends AppCompatActivity {
     public void setupSaveBttn(){
 
         Button submitButton = findViewById(R.id.AddTaskSubmitButton);
-
         submitButton.setOnClickListener(v -> {
-
             saveTask();
-
         });
     }
 
 
     private void setUpAddImageButton(){
         findViewById(R.id.addImageButton).setOnClickListener(v->{
-
             launchImageSelectionIntent();
-
         });
-
     }
 
     private void launchImageSelectionIntent(){
@@ -143,6 +176,7 @@ public class AddTask extends AppCompatActivity {
                 registerForActivityResult(
                         new ActivityResultContracts.StartActivityForResult(),
                         result -> {
+                            if(result.getData() == null) startActivity(new Intent(this, AddTask.class));
                             Uri pickedImageFileUri = result.getData().getData();
                             try{
                                 InputStream pickedImageInputStream = getContentResolver().openInputStream(pickedImageFileUri);
@@ -210,7 +244,7 @@ public class AddTask extends AppCompatActivity {
         );
 
         Toast.makeText(this, "Task Saved!", Toast.LENGTH_SHORT).show();
-
+        startActivity(new Intent(this, AddTask.class));
     }
 
     // Taken from https://stackoverflow.com/a/25005243/16889809
