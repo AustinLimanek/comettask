@@ -22,6 +22,7 @@ import java.io.FileNotFoundException;
 import java.io.InputStream;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Locale;
 import java.util.stream.Collectors;
 
 
@@ -29,7 +30,7 @@ public class TaskDetail extends AppCompatActivity {
     public static final String DATABASE_NAME = "task_db";
     public static final String TAG = "TaskDetailPage";
 
-    String fileName;
+    String fileName ="water.png";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -42,11 +43,7 @@ public class TaskDetail extends AppCompatActivity {
     @Override
     protected void onResume() {
         super.onResume();
-        try {
-            setupTaskImage();
-        } catch (FileNotFoundException e) {
-            e.printStackTrace();
-        }
+
     }
 
     public void consumeProductExtra(){
@@ -65,8 +62,16 @@ public class TaskDetail extends AppCompatActivity {
                     ModelQuery.get(Task.class, taskId),
                     success -> {
                         final String taskBody = success.getData().getTaskDescription();
-                        fileName = success.getData().getS3ImageKey();
                         if (!taskBody.equals("")) taskViewLong.setText(taskBody);
+                        fileName = success.getData().getS3ImageKey();
+                        if(!(fileName == null)){
+                            fileName = fileName.substring(7);
+                            try {
+                                setupTaskImage();
+                            } catch (FileNotFoundException e) {
+                                e.printStackTrace();
+                            }
+                        }
                         Log.i(TAG, "successfully looked up task. This is the fileName: "+ fileName);
                     },
                     failure -> Log.w(DATABASE_NAME, "Failed to read description from database")
@@ -75,19 +80,20 @@ public class TaskDetail extends AppCompatActivity {
         else {
             taskView.setText("No Task");
         }
+
     }
 
     public void setupTaskImage() throws FileNotFoundException {
             Amplify.Storage.downloadFile(
-                    "charmander.png",
-                    new File(getApplicationContext().getFilesDir() + "/download.txt"),
+                    fileName,
+                    new File(getApplicationContext().getFilesDir() + "/" + fileName),
                     result -> {
                         ImageView taskImage = findViewById(R.id.imageView);
                         Bitmap bitmap = BitmapFactory.decodeFile(result.getFile().getAbsolutePath());
                         taskImage.setImageBitmap(bitmap);
-                        Log.i("MyAmplifyApp", "Successfully downloaded: " + fileName + " Please tells me this is true: ");
+                        Log.i("MyAmplifyApp", "Successfully downloaded: " + fileName + " Please tells me this is true: " + "charmander.png");
                     },
-                    error -> Log.e("MyAmplifyApp", "Download Failure " + fileName, error)
+                    error -> Log.e("MyAmplifyApp", "Download Failure " + fileName + " " + "charmander.png", error)
             );
     }
 
