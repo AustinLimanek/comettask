@@ -152,7 +152,12 @@ public class AddTask extends AppCompatActivity {
 
         Button submitButton = findViewById(R.id.AddTaskSubmitButton);
         submitButton.setOnClickListener(v -> {
+            if(((EditText)findViewById(R.id.AddTaskTaskName)).getText().toString().equals("")){
+                Toast.makeText(this, "Please enter a task name", Toast.LENGTH_SHORT).show();
+            }
+            else{
             saveTask();
+            }
         });
     }
 
