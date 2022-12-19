@@ -152,7 +152,12 @@ public class AddTask extends AppCompatActivity {
 
         Button submitButton = findViewById(R.id.AddTaskSubmitButton);
         submitButton.setOnClickListener(v -> {
+            if(((EditText)findViewById(R.id.AddTaskTaskName)).getText().toString().equals("")){
+                Toast.makeText(this, "Please enter a task name", Toast.LENGTH_SHORT).show();
+            }
+            else{
             saveTask();
+            }
         });
     }
 
@@ -176,8 +181,13 @@ public class AddTask extends AppCompatActivity {
                 registerForActivityResult(
                         new ActivityResultContracts.StartActivityForResult(),
                         result -> {
-                            if(result.getData() == null) startActivity(new Intent(this, AddTask.class));
-                            Uri pickedImageFileUri = result.getData().getData();
+                                Uri pickedImageFileUri = null;
+                            if(result.getData() == null) {
+                                pickedImageFileUri = Uri.parse("No File");
+                            }
+                            else{
+                                pickedImageFileUri = result.getData().getData();
+                            }
                             try{
                                 InputStream pickedImageInputStream = getContentResolver().openInputStream(pickedImageFileUri);
                                 String pickedImageFilename = getFileNameFromUri(pickedImageFileUri);
