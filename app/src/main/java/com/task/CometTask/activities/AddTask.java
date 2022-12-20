@@ -4,11 +4,15 @@ import androidx.activity.result.ActivityResult;
 import androidx.activity.result.ActivityResultCallback;
 import androidx.activity.result.ActivityResultLauncher;
 import androidx.activity.result.contract.ActivityResultContracts;
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.core.app.ActivityCompat;
 
 
+import android.Manifest;
 import android.annotation.SuppressLint;
 import android.content.Intent;
+import android.content.pm.PackageManager;
 import android.database.Cursor;
 import android.graphics.BitmapFactory;
 import android.net.Uri;
@@ -21,6 +25,7 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.Spinner;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import com.amplifyframework.api.graphql.model.ModelMutation;
@@ -29,6 +34,11 @@ import com.amplifyframework.core.Amplify;
 import com.amplifyframework.datastore.generated.model.Task;
 import com.amplifyframework.datastore.generated.model.TaskStateEnum;
 import com.amplifyframework.datastore.generated.model.Team;
+import com.google.android.gms.location.FusedLocationProviderClient;
+import com.google.android.gms.location.LocationRequest;
+import com.google.android.gms.location.LocationServices;
+import com.google.android.gms.tasks.CancellationToken;
+import com.google.android.gms.tasks.OnTokenCanceledListener;
 import com.task.CometTask.R;
 
 
@@ -46,11 +56,13 @@ public class AddTask extends AppCompatActivity {
     CompletableFuture<List<Team>> teamFuture = new CompletableFuture<>();
     ActivityResultLauncher<Intent> activityResultLauncher;
     String s3ImageKey;
+    private FusedLocationProviderClient fusedLocationProviderClient;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_add_task);
+        fusedLocationProviderClient = LocationServices.getFusedLocationProviderClient(this);
         activityResultLauncher = getImagePickingActivityResultLauncher();
 
 //        Team blue = Team.builder()
@@ -71,12 +83,12 @@ public class AddTask extends AppCompatActivity {
                     ArrayList<String> teamNames = new ArrayList<>();
                     ArrayList<Team> teams = new ArrayList<>();
                     int count = 0;
-                    for(Team team : success.getData()){
+                    for (Team team : success.getData()) {
                         teamNames.add(team.getName());
                         teams.add(team);
                         count += 1;
                     }
-                    if(count < 1){
+                    if (count < 1) {
                         initTeams();
                         startActivity(new Intent(this, AddTask.class));
                     }
@@ -95,6 +107,56 @@ public class AddTask extends AppCompatActivity {
         setupTypeSpinner();
         setupSaveBttn();
         setUpAddImageButton();
+        getLocation();
+    }
+
+    private void getLocation() {
+        if (ActivityCompat.checkSelfPermission(this, Manifest.permission.ACCESS_FINE_LOCATION) != PackageManager.PERMISSION_GRANTED && ActivityCompat.checkSelfPermission(this, Manifest.permission.ACCESS_COARSE_LOCATION) != PackageManager.PERMISSION_GRANTED) {
+            // TODO: Consider calling
+            //    ActivityCompat#requestPermissions
+            // here to request the missing permissions, and then overriding
+            //   public void onRequestPermissionsResult(int requestCode, String[] permissions,
+            //                                          int[] grantResults)
+            // to handle the case where the user grants the permission. See the documentation
+            // for ActivityCompat#requestPermissions for more details.
+            return;
+        }
+        fusedLocationProviderClient.getLastLocation().addOnSuccessListener(location -> {
+            if (location == null) {
+                Log.w(TAG, "Location was null");
+            }
+            else{
+                String lastLatitude = Double.toString(location.getLatitude());
+                String lastLongitude = Double.toString(location.getLongitude());
+
+                String message = "Latitude: " + lastLatitude + "\n" + "Longitude: " + lastLongitude;
+
+                ((TextView)findViewById(R.id.AddTaskLatLong)).setText(message);
+                Log.i(TAG, "Our last latitude " + lastLatitude);
+                Log.i(TAG, "Our last longitude " + lastLongitude);
+            }
+        });
+
+//        fusedLocationProviderClient.getCurrentLocation(LocationRequest.PRIORITY_HIGH_ACCURACY, new CancellationToken() {
+//            @NonNull
+//            @Override
+//            public CancellationToken onCanceledRequested(@NonNull OnTokenCanceledListener onTokenCanceledListener) {
+//                return null;
+//            }
+//
+//            @Override
+//            public boolean isCancellationRequested() {
+//                return false;
+//            }
+//        }).addOnSuccessListener(location -> {
+//            if (location == null) {
+//                Log.w(TAG, "Location was null");
+//            }
+//            String lastLatitude = Double.toString(location.getLatitude());
+//            String lastLongitude = Double.toString(location.getLongitude());
+//            Log.i(TAG, "Our last latitude " + lastLatitude);
+//            Log.i(TAG, "Our last longitude " + lastLongitude);
+//        });
     }
 
     private void initTeams(){
@@ -160,7 +222,6 @@ public class AddTask extends AppCompatActivity {
             }
         });
     }
-
 
     private void setUpAddImageButton(){
         findViewById(R.id.addImageButton).setOnClickListener(v->{

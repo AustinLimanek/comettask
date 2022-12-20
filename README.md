@@ -19,3 +19,4 @@ This is a basic rendering of the home screen for my application.
 ![The Home Screen](screenshots/noaccount.png)
 ![The Home Screen](screenshots/account.png)
 ![The Home Screen](screenshots/charmander.png)
+![The Home Screen](screenshots/locationlatlong.png)

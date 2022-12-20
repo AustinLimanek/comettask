@@ -12,7 +12,7 @@
         android:layout_width="0dp"
         android:layout_height="63dp"
         android:layout_marginStart="1dp"
-        android:layout_marginTop="144dp"
+        android:layout_marginTop="192dp"
         android:layout_marginEnd="1dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
@@ -23,18 +23,20 @@
         android:id="@+id/AddTaskSubmitButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginTop="87dp"
+        android:layout_marginBottom="16dp"
         android:text="@string/submit"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/AddTaskTaskBody"
-        app:layout_constraintVertical_bias="0.738" />
+        app:layout_constraintTop_toBottomOf="@+id/teamSpinner"
+        app:layout_constraintVertical_bias="1.0" />
 
     <EditText
         android:id="@+id/AddTaskTaskName"
         android:layout_width="208dp"
         android:layout_height="59dp"
-        android:layout_marginTop="124dp"
+        android:layout_marginTop="108dp"
         android:ems="10"
         android:hint="Task Name"
         android:inputType="textPersonName"
@@ -61,9 +63,10 @@
         android:layout_width="0dp"
         android:layout_height="63dp"
         android:layout_marginStart="1dp"
-        android:layout_marginTop="52dp"
+        android:layout_marginTop="100dp"
         android:layout_marginEnd="1dp"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/AddTaskTaskBody" />
 
@@ -93,5 +96,19 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:srcCompat="@drawable/amplify_storage_transfer_notification_icon" />
+
+    <TextView
+        android:id="@+id/AddTaskLatLong"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="130dp"
+        android:layout_marginTop="36dp"
+        android:layout_marginEnd="130dp"
+        android:layout_marginBottom="45dp"
+        android:text="this is text from this text"
+        app:layout_constraintBottom_toTopOf="@+id/AddTaskSpinnerStatus"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/AddTaskTaskBody" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
