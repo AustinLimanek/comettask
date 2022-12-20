@@ -1,12 +1,13 @@
 -- Merging decision tree log ---
 manifest
-ADDED from /Users/austinlimanek/projects/courses/code-401/comettask/app/src/main/AndroidManifest.xml:2:1-80:12
-INJECTED from /Users/austinlimanek/projects/courses/code-401/comettask/app/src/main/AndroidManifest.xml:2:1-80:12
-INJECTED from /Users/austinlimanek/projects/courses/code-401/comettask/app/src/main/AndroidManifest.xml:2:1-80:12
-INJECTED from /Users/austinlimanek/projects/courses/code-401/comettask/app/src/main/AndroidManifest.xml:2:1-80:12
+ADDED from /Users/austinlimanek/projects/courses/code-401/comettask/app/src/main/AndroidManifest.xml:2:1-82:12
+INJECTED from /Users/austinlimanek/projects/courses/code-401/comettask/app/src/main/AndroidManifest.xml:2:1-82:12
+INJECTED from /Users/austinlimanek/projects/courses/code-401/comettask/app/src/main/AndroidManifest.xml:2:1-82:12
+INJECTED from /Users/austinlimanek/projects/courses/code-401/comettask/app/src/main/AndroidManifest.xml:2:1-82:12
 MERGED from [com.amplifyframework:aws-storage-s3:2.0.0] /Users/austinlimanek/.gradle/caches/transforms-3/624437df303896852e3a59d7b5308833/transformed/aws-storage-s3-2.0.0/AndroidManifest.xml:16:1-28:12
 MERGED from [com.amplifyframework:aws-api:2.0.0] /Users/austinlimanek/.gradle/caches/transforms-3/85bc1b1d100a23eb5f5d0e4e297de5f8/transformed/aws-api-2.0.0/AndroidManifest.xml:16:1-26:12
 MERGED from [com.amplifyframework:aws-auth-cognito:2.0.0] /Users/austinlimanek/.gradle/caches/transforms-3/da6e71465f0681d9bf4570413c543ce3/transformed/aws-auth-cognito-2.0.0/AndroidManifest.xml:16:1-43:12
+MERGED from [com.google.android.gms:play-services-location:21.0.1] /Users/austinlimanek/.gradle/caches/transforms-3/16a5f64111d2ac2be264dcf8c9f28816/transformed/play-services-location-21.0.1/AndroidManifest.xml:2:1-9:12
 MERGED from [com.amazonaws:aws-android-sdk-mobile-client:2.16.13] /Users/austinlimanek/.gradle/caches/transforms-3/2e3875d20e3fc994a3e9529c7c5e7601/transformed/aws-android-sdk-mobile-client-2.16.13/AndroidManifest.xml:2:1-7:12
 MERGED from [com.amazonaws:aws-android-sdk-auth-core:2.16.13] /Users/austinlimanek/.gradle/caches/transforms-3/37ff1109c83f5bfbea28420f031eb97a/transformed/aws-android-sdk-auth-core-2.16.13/AndroidManifest.xml:2:1-4:12
 MERGED from [com.amplifyframework:aws-datastore:2.0.0] /Users/austinlimanek/.gradle/caches/transforms-3/a5a9a37915406e440652900141875032/transformed/aws-datastore-2.0.0/AndroidManifest.xml:16:1-24:12
@@ -24,6 +25,9 @@ MERGED from [androidx.navigation:navigation-ui:2.3.4] /Users/austinlimanek/.grad
 MERGED from [com.google.android.material:material:1.5.0] /Users/austinlimanek/.gradle/caches/transforms-3/598c05c81fe9254b4832878dd4a0db6b/transformed/material-1.5.0/AndroidManifest.xml:17:1-24:12
 MERGED from [androidx.constraintlayout:constraintlayout:2.1.3] /Users/austinlimanek/.gradle/caches/transforms-3/313e22a46d683565eab6931c61c47408/transformed/constraintlayout-2.1.3/AndroidManifest.xml:2:1-11:12
 MERGED from [androidx.appcompat:appcompat:1.4.1] /Users/austinlimanek/.gradle/caches/transforms-3/c9231f61ffc2ed8722bea521977306ff/transformed/appcompat-1.4.1/AndroidManifest.xml:17:1-24:12
+MERGED from [com.google.android.gms:play-services-base:18.1.0] /Users/austinlimanek/.gradle/caches/transforms-3/75e11374b42ba83fd12d55e4ccb129ba/transformed/play-services-base-18.1.0/AndroidManifest.xml:16:1-24:12
+MERGED from [com.google.android.gms:play-services-tasks:18.0.2] /Users/austinlimanek/.gradle/caches/transforms-3/42aee9e5e500aa66f71dd708145fc602/transformed/play-services-tasks-18.0.2/AndroidManifest.xml:2:1-6:12
+MERGED from [com.google.android.gms:play-services-basement:18.1.0] /Users/austinlimanek/.gradle/caches/transforms-3/22101baaa08a513511d2fe6a33f29de4/transformed/play-services-basement-18.1.0/AndroidManifest.xml:16:1-26:12
 MERGED from [androidx.viewpager2:viewpager2:1.0.0] /Users/austinlimanek/.gradle/caches/transforms-3/b975d4bc4d6d45f491a86fff0fa3caaf/transformed/viewpager2-1.0.0/AndroidManifest.xml:17:1-24:12
 MERGED from [androidx.legacy:legacy-support-v4:1.0.0] /Users/austinlimanek/.gradle/caches/transforms-3/df63a53b8201b61e35b0f684f2c47f60/transformed/legacy-support-v4-1.0.0/AndroidManifest.xml:17:1-22:12
 MERGED from [androidx.navigation:navigation-fragment:2.3.4] /Users/austinlimanek/.gradle/caches/transforms-3/a0d2dee1c57272cf2d148c8b8b32b080/transformed/navigation-fragment-2.3.4/AndroidManifest.xml:17:1-24:12
@@ -84,35 +88,47 @@ MERGED from [androidx.lifecycle:lifecycle-livedata-core:2.5.1] /Users/austinlima
 MERGED from [androidx.arch.core:core-runtime:2.1.0] /Users/austinlimanek/.gradle/caches/transforms-3/86cac07897472df51478ab51cbbaba04/transformed/core-runtime-2.1.0/AndroidManifest.xml:17:1-24:12
 MERGED from [androidx.annotation:annotation-experimental:1.1.0] /Users/austinlimanek/.gradle/caches/transforms-3/d1b81e9b9294b0bc78ebcbc0700bfe58/transformed/annotation-experimental-1.1.0/AndroidManifest.xml:17:1-24:12
 MERGED from [com.google.android.play:core:1.9.1] /Users/austinlimanek/.gradle/caches/transforms-3/eb3849da830ce3e4a192818c9131a834/transformed/core-1.9.1/AndroidManifest.xml:2:1-23:12
-INJECTED from /Users/austinlimanek/projects/courses/code-401/comettask/app/src/main/AndroidManifest.xml:2:1-80:12
-INJECTED from /Users/austinlimanek/projects/courses/code-401/comettask/app/src/main/AndroidManifest.xml:2:1-80:12
-INJECTED from /Users/austinlimanek/projects/courses/code-401/comettask/app/src/main/AndroidManifest.xml:2:1-80:12
+INJECTED from /Users/austinlimanek/projects/courses/code-401/comettask/app/src/main/AndroidManifest.xml:2:1-82:12
+INJECTED from /Users/austinlimanek/projects/courses/code-401/comettask/app/src/main/AndroidManifest.xml:2:1-82:12
+INJECTED from /Users/austinlimanek/projects/courses/code-401/comettask/app/src/main/AndroidManifest.xml:2:1-82:12
 	package
 		INJECTED from /Users/austinlimanek/projects/courses/code-401/comettask/app/src/main/AndroidManifest.xml
-		ADDED from /Users/austinlimanek/projects/courses/code-401/comettask/app/src/main/AndroidManifest.xml:2:1-80:12
+		ADDED from /Users/austinlimanek/projects/courses/code-401/comettask/app/src/main/AndroidManifest.xml:2:1-82:12
 		INJECTED from /Users/austinlimanek/projects/courses/code-401/comettask/app/src/main/AndroidManifest.xml
 	android:versionName
 		INJECTED from /Users/austinlimanek/projects/courses/code-401/comettask/app/src/main/AndroidManifest.xml
-		ADDED from /Users/austinlimanek/projects/courses/code-401/comettask/app/src/main/AndroidManifest.xml:2:1-80:12
+		ADDED from /Users/austinlimanek/projects/courses/code-401/comettask/app/src/main/AndroidManifest.xml:2:1-82:12
 		INJECTED from /Users/austinlimanek/projects/courses/code-401/comettask/app/src/main/AndroidManifest.xml
 	xmlns:tools
 		ADDED from /Users/austinlimanek/projects/courses/code-401/comettask/app/src/main/AndroidManifest.xml:3:5-51
 	android:versionCode
 		INJECTED from /Users/austinlimanek/projects/courses/code-401/comettask/app/src/main/AndroidManifest.xml
-		ADDED from /Users/austinlimanek/projects/courses/code-401/comettask/app/src/main/AndroidManifest.xml:2:1-80:12
+		ADDED from /Users/austinlimanek/projects/courses/code-401/comettask/app/src/main/AndroidManifest.xml:2:1-82:12
 		INJECTED from /Users/austinlimanek/projects/courses/code-401/comettask/app/src/main/AndroidManifest.xml
 	xmlns:android
 		ADDED from /Users/austinlimanek/projects/courses/code-401/comettask/app/src/main/AndroidManifest.xml:2:11-69
+uses-permission#android.permission.ACCESS_COARSE_LOCATION
+ADDED from /Users/austinlimanek/projects/courses/code-401/comettask/app/src/main/AndroidManifest.xml:5:5-81
+	android:name
+		ADDED from /Users/austinlimanek/projects/courses/code-401/comettask/app/src/main/AndroidManifest.xml:5:22-78
 application
-ADDED from /Users/austinlimanek/projects/courses/code-401/comettask/app/src/main/AndroidManifest.xml:5:5-78:19
+ADDED from /Users/austinlimanek/projects/courses/code-401/comettask/app/src/main/AndroidManifest.xml:7:5-80:19
 MERGED from [com.amplifyframework:aws-auth-cognito:2.0.0] /Users/austinlimanek/.gradle/caches/transforms-3/da6e71465f0681d9bf4570413c543ce3/transformed/aws-auth-cognito-2.0.0/AndroidManifest.xml:35:5-41:19
 MERGED from [com.amplifyframework:aws-auth-cognito:2.0.0] /Users/austinlimanek/.gradle/caches/transforms-3/da6e71465f0681d9bf4570413c543ce3/transformed/aws-auth-cognito-2.0.0/AndroidManifest.xml:35:5-41:19
+MERGED from [com.google.android.gms:play-services-location:21.0.1] /Users/austinlimanek/.gradle/caches/transforms-3/16a5f64111d2ac2be264dcf8c9f28816/transformed/play-services-location-21.0.1/AndroidManifest.xml:7:5-20
+MERGED from [com.google.android.gms:play-services-location:21.0.1] /Users/austinlimanek/.gradle/caches/transforms-3/16a5f64111d2ac2be264dcf8c9f28816/transformed/play-services-location-21.0.1/AndroidManifest.xml:7:5-20
 MERGED from [com.amplifyframework:core:2.0.0] /Users/austinlimanek/.gradle/caches/transforms-3/1a355f8567c5c4cedd946e8a0af1af97/transformed/core-2.0.0/AndroidManifest.xml:26:5-30:19
 MERGED from [com.amplifyframework:core:2.0.0] /Users/austinlimanek/.gradle/caches/transforms-3/1a355f8567c5c4cedd946e8a0af1af97/transformed/core-2.0.0/AndroidManifest.xml:26:5-30:19
 MERGED from [com.google.android.material:material:1.5.0] /Users/austinlimanek/.gradle/caches/transforms-3/598c05c81fe9254b4832878dd4a0db6b/transformed/material-1.5.0/AndroidManifest.xml:22:5-20
 MERGED from [com.google.android.material:material:1.5.0] /Users/austinlimanek/.gradle/caches/transforms-3/598c05c81fe9254b4832878dd4a0db6b/transformed/material-1.5.0/AndroidManifest.xml:22:5-20
 MERGED from [androidx.constraintlayout:constraintlayout:2.1.3] /Users/austinlimanek/.gradle/caches/transforms-3/313e22a46d683565eab6931c61c47408/transformed/constraintlayout-2.1.3/AndroidManifest.xml:9:5-20
 MERGED from [androidx.constraintlayout:constraintlayout:2.1.3] /Users/austinlimanek/.gradle/caches/transforms-3/313e22a46d683565eab6931c61c47408/transformed/constraintlayout-2.1.3/AndroidManifest.xml:9:5-20
+MERGED from [com.google.android.gms:play-services-base:18.1.0] /Users/austinlimanek/.gradle/caches/transforms-3/75e11374b42ba83fd12d55e4ccb129ba/transformed/play-services-base-18.1.0/AndroidManifest.xml:19:5-23:19
+MERGED from [com.google.android.gms:play-services-base:18.1.0] /Users/austinlimanek/.gradle/caches/transforms-3/75e11374b42ba83fd12d55e4ccb129ba/transformed/play-services-base-18.1.0/AndroidManifest.xml:19:5-23:19
+MERGED from [com.google.android.gms:play-services-tasks:18.0.2] /Users/austinlimanek/.gradle/caches/transforms-3/42aee9e5e500aa66f71dd708145fc602/transformed/play-services-tasks-18.0.2/AndroidManifest.xml:5:5-20
+MERGED from [com.google.android.gms:play-services-tasks:18.0.2] /Users/austinlimanek/.gradle/caches/transforms-3/42aee9e5e500aa66f71dd708145fc602/transformed/play-services-tasks-18.0.2/AndroidManifest.xml:5:5-20
+MERGED from [com.google.android.gms:play-services-basement:18.1.0] /Users/austinlimanek/.gradle/caches/transforms-3/22101baaa08a513511d2fe6a33f29de4/transformed/play-services-basement-18.1.0/AndroidManifest.xml:20:5-24:19
+MERGED from [com.google.android.gms:play-services-basement:18.1.0] /Users/austinlimanek/.gradle/caches/transforms-3/22101baaa08a513511d2fe6a33f29de4/transformed/play-services-basement-18.1.0/AndroidManifest.xml:20:5-24:19
 MERGED from [androidx.emoji2:emoji2:1.0.0] /Users/austinlimanek/.gradle/caches/transforms-3/4b580972190c9e236a669c6a1f1f8a9e/transformed/emoji2-1.0.0/AndroidManifest.xml:25:5-35:19
 MERGED from [androidx.emoji2:emoji2:1.0.0] /Users/austinlimanek/.gradle/caches/transforms-3/4b580972190c9e236a669c6a1f1f8a9e/transformed/emoji2-1.0.0/AndroidManifest.xml:25:5-35:19
 MERGED from [androidx.work:work-runtime:2.7.1] /Users/austinlimanek/.gradle/caches/transforms-3/8254f7a56a6d62d947ec6639152035e2/transformed/work-runtime-2.7.1/AndroidManifest.xml:30:5-143:19
@@ -132,89 +148,89 @@ MERGED from [com.google.android.play:core:1.9.1] /Users/austinlimanek/.gradle/ca
 	android:appComponentFactory
 		ADDED from [androidx.core:core:1.7.0] /Users/austinlimanek/.gradle/caches/transforms-3/5586099dc2be2a001572cf14c2426ba8/transformed/core-1.7.0/AndroidManifest.xml:24:18-86
 	android:supportsRtl
-		ADDED from /Users/austinlimanek/projects/courses/code-401/comettask/app/src/main/AndroidManifest.xml:13:9-35
+		ADDED from /Users/austinlimanek/projects/courses/code-401/comettask/app/src/main/AndroidManifest.xml:15:9-35
 	android:label
-		ADDED from /Users/austinlimanek/projects/courses/code-401/comettask/app/src/main/AndroidManifest.xml:11:9-41
+		ADDED from /Users/austinlimanek/projects/courses/code-401/comettask/app/src/main/AndroidManifest.xml:13:9-41
 	android:fullBackupContent
-		ADDED from /Users/austinlimanek/projects/courses/code-401/comettask/app/src/main/AndroidManifest.xml:9:9-54
+		ADDED from /Users/austinlimanek/projects/courses/code-401/comettask/app/src/main/AndroidManifest.xml:11:9-54
 	android:roundIcon
-		ADDED from /Users/austinlimanek/projects/courses/code-401/comettask/app/src/main/AndroidManifest.xml:12:9-54
+		ADDED from /Users/austinlimanek/projects/courses/code-401/comettask/app/src/main/AndroidManifest.xml:14:9-54
 	tools:targetApi
-		ADDED from /Users/austinlimanek/projects/courses/code-401/comettask/app/src/main/AndroidManifest.xml:15:9-29
+		ADDED from /Users/austinlimanek/projects/courses/code-401/comettask/app/src/main/AndroidManifest.xml:17:9-29
 	android:icon
-		ADDED from /Users/austinlimanek/projects/courses/code-401/comettask/app/src/main/AndroidManifest.xml:10:9-43
+		ADDED from /Users/austinlimanek/projects/courses/code-401/comettask/app/src/main/AndroidManifest.xml:12:9-43
 	android:allowBackup
-		ADDED from /Users/austinlimanek/projects/courses/code-401/comettask/app/src/main/AndroidManifest.xml:7:9-35
+		ADDED from /Users/austinlimanek/projects/courses/code-401/comettask/app/src/main/AndroidManifest.xml:9:9-35
 	android:theme
-		ADDED from /Users/austinlimanek/projects/courses/code-401/comettask/app/src/main/AndroidManifest.xml:14:9-51
+		ADDED from /Users/austinlimanek/projects/courses/code-401/comettask/app/src/main/AndroidManifest.xml:16:9-51
 	android:dataExtractionRules
-		ADDED from /Users/austinlimanek/projects/courses/code-401/comettask/app/src/main/AndroidManifest.xml:8:9-65
+		ADDED from /Users/austinlimanek/projects/courses/code-401/comettask/app/src/main/AndroidManifest.xml:10:9-65
 	android:name
-		ADDED from /Users/austinlimanek/projects/courses/code-401/comettask/app/src/main/AndroidManifest.xml:6:9-52
+		ADDED from /Users/austinlimanek/projects/courses/code-401/comettask/app/src/main/AndroidManifest.xml:8:9-52
 activity#com.task.CometTask.activities.SignInPage
-ADDED from /Users/austinlimanek/projects/courses/code-401/comettask/app/src/main/AndroidManifest.xml:16:9-22:20
+ADDED from /Users/austinlimanek/projects/courses/code-401/comettask/app/src/main/AndroidManifest.xml:18:9-24:20
 	android:exported
-		ADDED from /Users/austinlimanek/projects/courses/code-401/comettask/app/src/main/AndroidManifest.xml:18:13-37
+		ADDED from /Users/austinlimanek/projects/courses/code-401/comettask/app/src/main/AndroidManifest.xml:20:13-37
 	android:name
-		ADDED from /Users/austinlimanek/projects/courses/code-401/comettask/app/src/main/AndroidManifest.xml:17:13-50
+		ADDED from /Users/austinlimanek/projects/courses/code-401/comettask/app/src/main/AndroidManifest.xml:19:13-50
 meta-data#android.app.lib_name
-ADDED from /Users/austinlimanek/projects/courses/code-401/comettask/app/src/main/AndroidManifest.xml:19:13-21:36
+ADDED from /Users/austinlimanek/projects/courses/code-401/comettask/app/src/main/AndroidManifest.xml:21:13-23:36
 	android:value
-		ADDED from /Users/austinlimanek/projects/courses/code-401/comettask/app/src/main/AndroidManifest.xml:21:17-33
+		ADDED from /Users/austinlimanek/projects/courses/code-401/comettask/app/src/main/AndroidManifest.xml:23:17-33
 	android:name
-		ADDED from /Users/austinlimanek/projects/courses/code-401/comettask/app/src/main/AndroidManifest.xml:20:17-52
+		ADDED from /Users/austinlimanek/projects/courses/code-401/comettask/app/src/main/AndroidManifest.xml:22:17-52
 activity#com.task.CometTask.activities.verificationPage
-ADDED from /Users/austinlimanek/projects/courses/code-401/comettask/app/src/main/AndroidManifest.xml:23:9-29:20
+ADDED from /Users/austinlimanek/projects/courses/code-401/comettask/app/src/main/AndroidManifest.xml:25:9-31:20
 	android:exported
-		ADDED from /Users/austinlimanek/projects/courses/code-401/comettask/app/src/main/AndroidManifest.xml:25:13-37
+		ADDED from /Users/austinlimanek/projects/courses/code-401/comettask/app/src/main/AndroidManifest.xml:27:13-37
 	android:name
-		ADDED from /Users/austinlimanek/projects/courses/code-401/comettask/app/src/main/AndroidManifest.xml:24:13-56
+		ADDED from /Users/austinlimanek/projects/courses/code-401/comettask/app/src/main/AndroidManifest.xml:26:13-56
 activity#com.task.CometTask.activities.SignUpActivity
-ADDED from /Users/austinlimanek/projects/courses/code-401/comettask/app/src/main/AndroidManifest.xml:30:9-36:20
+ADDED from /Users/austinlimanek/projects/courses/code-401/comettask/app/src/main/AndroidManifest.xml:32:9-38:20
 	android:exported
-		ADDED from /Users/austinlimanek/projects/courses/code-401/comettask/app/src/main/AndroidManifest.xml:32:13-37
+		ADDED from /Users/austinlimanek/projects/courses/code-401/comettask/app/src/main/AndroidManifest.xml:34:13-37
 	android:name
-		ADDED from /Users/austinlimanek/projects/courses/code-401/comettask/app/src/main/AndroidManifest.xml:31:13-54
+		ADDED from /Users/austinlimanek/projects/courses/code-401/comettask/app/src/main/AndroidManifest.xml:33:13-54
 activity#com.task.CometTask.activities.TaskDetail
-ADDED from /Users/austinlimanek/projects/courses/code-401/comettask/app/src/main/AndroidManifest.xml:37:9-43:20
+ADDED from /Users/austinlimanek/projects/courses/code-401/comettask/app/src/main/AndroidManifest.xml:39:9-45:20
 	android:exported
-		ADDED from /Users/austinlimanek/projects/courses/code-401/comettask/app/src/main/AndroidManifest.xml:39:13-37
+		ADDED from /Users/austinlimanek/projects/courses/code-401/comettask/app/src/main/AndroidManifest.xml:41:13-37
 	android:name
-		ADDED from /Users/austinlimanek/projects/courses/code-401/comettask/app/src/main/AndroidManifest.xml:38:13-50
+		ADDED from /Users/austinlimanek/projects/courses/code-401/comettask/app/src/main/AndroidManifest.xml:40:13-50
 activity#com.task.CometTask.activities.UserSettings
-ADDED from /Users/austinlimanek/projects/courses/code-401/comettask/app/src/main/AndroidManifest.xml:44:9-50:20
+ADDED from /Users/austinlimanek/projects/courses/code-401/comettask/app/src/main/AndroidManifest.xml:46:9-52:20
 	android:exported
-		ADDED from /Users/austinlimanek/projects/courses/code-401/comettask/app/src/main/AndroidManifest.xml:46:13-37
+		ADDED from /Users/austinlimanek/projects/courses/code-401/comettask/app/src/main/AndroidManifest.xml:48:13-37
 	android:name
-		ADDED from /Users/austinlimanek/projects/courses/code-401/comettask/app/src/main/AndroidManifest.xml:45:13-52
+		ADDED from /Users/austinlimanek/projects/courses/code-401/comettask/app/src/main/AndroidManifest.xml:47:13-52
 activity#com.task.CometTask.activities.ViewAllTasks
-ADDED from /Users/austinlimanek/projects/courses/code-401/comettask/app/src/main/AndroidManifest.xml:51:9-57:20
+ADDED from /Users/austinlimanek/projects/courses/code-401/comettask/app/src/main/AndroidManifest.xml:53:9-59:20
 	android:exported
-		ADDED from /Users/austinlimanek/projects/courses/code-401/comettask/app/src/main/AndroidManifest.xml:53:13-37
+		ADDED from /Users/austinlimanek/projects/courses/code-401/comettask/app/src/main/AndroidManifest.xml:55:13-37
 	android:name
-		ADDED from /Users/austinlimanek/projects/courses/code-401/comettask/app/src/main/AndroidManifest.xml:52:13-52
+		ADDED from /Users/austinlimanek/projects/courses/code-401/comettask/app/src/main/AndroidManifest.xml:54:13-52
 activity#com.task.CometTask.activities.AddTask
-ADDED from /Users/austinlimanek/projects/courses/code-401/comettask/app/src/main/AndroidManifest.xml:58:9-64:20
+ADDED from /Users/austinlimanek/projects/courses/code-401/comettask/app/src/main/AndroidManifest.xml:60:9-66:20
 	android:exported
-		ADDED from /Users/austinlimanek/projects/courses/code-401/comettask/app/src/main/AndroidManifest.xml:60:13-37
+		ADDED from /Users/austinlimanek/projects/courses/code-401/comettask/app/src/main/AndroidManifest.xml:62:13-37
 	android:name
-		ADDED from /Users/austinlimanek/projects/courses/code-401/comettask/app/src/main/AndroidManifest.xml:59:13-47
+		ADDED from /Users/austinlimanek/projects/courses/code-401/comettask/app/src/main/AndroidManifest.xml:61:13-47
 activity#com.task.CometTask.activities.MainActivity
-ADDED from /Users/austinlimanek/projects/courses/code-401/comettask/app/src/main/AndroidManifest.xml:65:9-77:20
+ADDED from /Users/austinlimanek/projects/courses/code-401/comettask/app/src/main/AndroidManifest.xml:67:9-79:20
 	android:exported
-		ADDED from /Users/austinlimanek/projects/courses/code-401/comettask/app/src/main/AndroidManifest.xml:67:13-36
+		ADDED from /Users/austinlimanek/projects/courses/code-401/comettask/app/src/main/AndroidManifest.xml:69:13-36
 	android:name
-		ADDED from /Users/austinlimanek/projects/courses/code-401/comettask/app/src/main/AndroidManifest.xml:66:13-52
+		ADDED from /Users/austinlimanek/projects/courses/code-401/comettask/app/src/main/AndroidManifest.xml:68:13-52
 intent-filter#action:name:android.intent.action.MAIN+category:name:android.intent.category.LAUNCHER
-ADDED from /Users/austinlimanek/projects/courses/code-401/comettask/app/src/main/AndroidManifest.xml:68:13-72:29
+ADDED from /Users/austinlimanek/projects/courses/code-401/comettask/app/src/main/AndroidManifest.xml:70:13-74:29
 action#android.intent.action.MAIN
-ADDED from /Users/austinlimanek/projects/courses/code-401/comettask/app/src/main/AndroidManifest.xml:69:17-69
+ADDED from /Users/austinlimanek/projects/courses/code-401/comettask/app/src/main/AndroidManifest.xml:71:17-69
 	android:name
-		ADDED from /Users/austinlimanek/projects/courses/code-401/comettask/app/src/main/AndroidManifest.xml:69:25-66
+		ADDED from /Users/austinlimanek/projects/courses/code-401/comettask/app/src/main/AndroidManifest.xml:71:25-66
 category#android.intent.category.LAUNCHER
-ADDED from /Users/austinlimanek/projects/courses/code-401/comettask/app/src/main/AndroidManifest.xml:71:17-77
+ADDED from /Users/austinlimanek/projects/courses/code-401/comettask/app/src/main/AndroidManifest.xml:73:17-77
 	android:name
-		ADDED from /Users/austinlimanek/projects/courses/code-401/comettask/app/src/main/AndroidManifest.xml:71:27-74
+		ADDED from /Users/austinlimanek/projects/courses/code-401/comettask/app/src/main/AndroidManifest.xml:73:27-74
 uses-sdk
 INJECTED from /Users/austinlimanek/projects/courses/code-401/comettask/app/src/main/AndroidManifest.xml reason: use-sdk injection requested
 INJECTED from /Users/austinlimanek/projects/courses/code-401/comettask/app/src/main/AndroidManifest.xml
@@ -225,6 +241,8 @@ MERGED from [com.amplifyframework:aws-api:2.0.0] /Users/austinlimanek/.gradle/ca
 MERGED from [com.amplifyframework:aws-api:2.0.0] /Users/austinlimanek/.gradle/caches/transforms-3/85bc1b1d100a23eb5f5d0e4e297de5f8/transformed/aws-api-2.0.0/AndroidManifest.xml:20:5-22:41
 MERGED from [com.amplifyframework:aws-auth-cognito:2.0.0] /Users/austinlimanek/.gradle/caches/transforms-3/da6e71465f0681d9bf4570413c543ce3/transformed/aws-auth-cognito-2.0.0/AndroidManifest.xml:20:5-22:41
 MERGED from [com.amplifyframework:aws-auth-cognito:2.0.0] /Users/austinlimanek/.gradle/caches/transforms-3/da6e71465f0681d9bf4570413c543ce3/transformed/aws-auth-cognito-2.0.0/AndroidManifest.xml:20:5-22:41
+MERGED from [com.google.android.gms:play-services-location:21.0.1] /Users/austinlimanek/.gradle/caches/transforms-3/16a5f64111d2ac2be264dcf8c9f28816/transformed/play-services-location-21.0.1/AndroidManifest.xml:5:5-44
+MERGED from [com.google.android.gms:play-services-location:21.0.1] /Users/austinlimanek/.gradle/caches/transforms-3/16a5f64111d2ac2be264dcf8c9f28816/transformed/play-services-location-21.0.1/AndroidManifest.xml:5:5-44
 MERGED from [com.amplifyframework:aws-datastore:2.0.0] /Users/austinlimanek/.gradle/caches/transforms-3/a5a9a37915406e440652900141875032/transformed/aws-datastore-2.0.0/AndroidManifest.xml:20:5-22:41
 MERGED from [com.amplifyframework:aws-datastore:2.0.0] /Users/austinlimanek/.gradle/caches/transforms-3/a5a9a37915406e440652900141875032/transformed/aws-datastore-2.0.0/AndroidManifest.xml:20:5-22:41
 MERGED from [com.amplifyframework:aws-api-appsync:2.0.0] /Users/austinlimanek/.gradle/caches/transforms-3/e7174b1d593c33a1da8a7d6aef30e155/transformed/aws-api-appsync-2.0.0/AndroidManifest.xml:20:5-22:41
@@ -255,6 +273,12 @@ MERGED from [androidx.constraintlayout:constraintlayout:2.1.3] /Users/austinlima
 MERGED from [androidx.constraintlayout:constraintlayout:2.1.3] /Users/austinlimanek/.gradle/caches/transforms-3/313e22a46d683565eab6931c61c47408/transformed/constraintlayout-2.1.3/AndroidManifest.xml:5:5-7:41
 MERGED from [androidx.appcompat:appcompat:1.4.1] /Users/austinlimanek/.gradle/caches/transforms-3/c9231f61ffc2ed8722bea521977306ff/transformed/appcompat-1.4.1/AndroidManifest.xml:20:5-22:41
 MERGED from [androidx.appcompat:appcompat:1.4.1] /Users/austinlimanek/.gradle/caches/transforms-3/c9231f61ffc2ed8722bea521977306ff/transformed/appcompat-1.4.1/AndroidManifest.xml:20:5-22:41
+MERGED from [com.google.android.gms:play-services-base:18.1.0] /Users/austinlimanek/.gradle/caches/transforms-3/75e11374b42ba83fd12d55e4ccb129ba/transformed/play-services-base-18.1.0/AndroidManifest.xml:18:5-43
+MERGED from [com.google.android.gms:play-services-base:18.1.0] /Users/austinlimanek/.gradle/caches/transforms-3/75e11374b42ba83fd12d55e4ccb129ba/transformed/play-services-base-18.1.0/AndroidManifest.xml:18:5-43
+MERGED from [com.google.android.gms:play-services-tasks:18.0.2] /Users/austinlimanek/.gradle/caches/transforms-3/42aee9e5e500aa66f71dd708145fc602/transformed/play-services-tasks-18.0.2/AndroidManifest.xml:4:5-43
+MERGED from [com.google.android.gms:play-services-tasks:18.0.2] /Users/austinlimanek/.gradle/caches/transforms-3/42aee9e5e500aa66f71dd708145fc602/transformed/play-services-tasks-18.0.2/AndroidManifest.xml:4:5-43
+MERGED from [com.google.android.gms:play-services-basement:18.1.0] /Users/austinlimanek/.gradle/caches/transforms-3/22101baaa08a513511d2fe6a33f29de4/transformed/play-services-basement-18.1.0/AndroidManifest.xml:18:5-43
+MERGED from [com.google.android.gms:play-services-basement:18.1.0] /Users/austinlimanek/.gradle/caches/transforms-3/22101baaa08a513511d2fe6a33f29de4/transformed/play-services-basement-18.1.0/AndroidManifest.xml:18:5-43
 MERGED from [androidx.viewpager2:viewpager2:1.0.0] /Users/austinlimanek/.gradle/caches/transforms-3/b975d4bc4d6d45f491a86fff0fa3caaf/transformed/viewpager2-1.0.0/AndroidManifest.xml:20:5-22:41
 MERGED from [androidx.viewpager2:viewpager2:1.0.0] /Users/austinlimanek/.gradle/caches/transforms-3/b975d4bc4d6d45f491a86fff0fa3caaf/transformed/viewpager2-1.0.0/AndroidManifest.xml:20:5-22:41
 MERGED from [androidx.legacy:legacy-support-v4:1.0.0] /Users/austinlimanek/.gradle/caches/transforms-3/df63a53b8201b61e35b0f684f2c47f60/transformed/legacy-support-v4-1.0.0/AndroidManifest.xml:20:5-44
@@ -438,17 +462,31 @@ ADDED from [com.amplifyframework:aws-auth-cognito:2.0.0] /Users/austinlimanek/.g
 	android:name
 		ADDED from [com.amplifyframework:aws-auth-cognito:2.0.0] /Users/austinlimanek/.gradle/caches/transforms-3/da6e71465f0681d9bf4570413c543ce3/transformed/aws-auth-cognito-2.0.0/AndroidManifest.xml:37:13-98
 uses-permission#android.permission.WRITE_EXTERNAL_STORAGE
-IMPLIED from /Users/austinlimanek/projects/courses/code-401/comettask/app/src/main/AndroidManifest.xml:2:1-80:12 reason: com.amazonaws.mobile.client has a targetSdkVersion < 4
+IMPLIED from /Users/austinlimanek/projects/courses/code-401/comettask/app/src/main/AndroidManifest.xml:2:1-82:12 reason: com.amazonaws.mobile.client has a targetSdkVersion < 4
 uses-permission#android.permission.READ_PHONE_STATE
-IMPLIED from /Users/austinlimanek/projects/courses/code-401/comettask/app/src/main/AndroidManifest.xml:2:1-80:12 reason: com.amazonaws.mobile.client has a targetSdkVersion < 4
+IMPLIED from /Users/austinlimanek/projects/courses/code-401/comettask/app/src/main/AndroidManifest.xml:2:1-82:12 reason: com.amazonaws.mobile.client has a targetSdkVersion < 4
 uses-permission#android.permission.READ_EXTERNAL_STORAGE
-IMPLIED from /Users/austinlimanek/projects/courses/code-401/comettask/app/src/main/AndroidManifest.xml:2:1-80:12 reason: com.amazonaws.mobile.client requested WRITE_EXTERNAL_STORAGE
+IMPLIED from /Users/austinlimanek/projects/courses/code-401/comettask/app/src/main/AndroidManifest.xml:2:1-82:12 reason: com.amazonaws.mobile.client requested WRITE_EXTERNAL_STORAGE
 activity#com.amplifyframework.devmenu.DeveloperMenuActivity
 ADDED from [com.amplifyframework:core:2.0.0] /Users/austinlimanek/.gradle/caches/transforms-3/1a355f8567c5c4cedd946e8a0af1af97/transformed/core-2.0.0/AndroidManifest.xml:27:9-29:54
 	android:theme
 		ADDED from [com.amplifyframework:core:2.0.0] /Users/austinlimanek/.gradle/caches/transforms-3/1a355f8567c5c4cedd946e8a0af1af97/transformed/core-2.0.0/AndroidManifest.xml:29:13-51
 	android:name
 		ADDED from [com.amplifyframework:core:2.0.0] /Users/austinlimanek/.gradle/caches/transforms-3/1a355f8567c5c4cedd946e8a0af1af97/transformed/core-2.0.0/AndroidManifest.xml:28:13-78
+activity#com.google.android.gms.common.api.GoogleApiActivity
+ADDED from [com.google.android.gms:play-services-base:18.1.0] /Users/austinlimanek/.gradle/caches/transforms-3/75e11374b42ba83fd12d55e4ccb129ba/transformed/play-services-base-18.1.0/AndroidManifest.xml:20:9-22:45
+	android:exported
+		ADDED from [com.google.android.gms:play-services-base:18.1.0] /Users/austinlimanek/.gradle/caches/transforms-3/75e11374b42ba83fd12d55e4ccb129ba/transformed/play-services-base-18.1.0/AndroidManifest.xml:22:19-43
+	android:theme
+		ADDED from [com.google.android.gms:play-services-base:18.1.0] /Users/austinlimanek/.gradle/caches/transforms-3/75e11374b42ba83fd12d55e4ccb129ba/transformed/play-services-base-18.1.0/AndroidManifest.xml:21:19-78
+	android:name
+		ADDED from [com.google.android.gms:play-services-base:18.1.0] /Users/austinlimanek/.gradle/caches/transforms-3/75e11374b42ba83fd12d55e4ccb129ba/transformed/play-services-base-18.1.0/AndroidManifest.xml:20:19-85
+meta-data#com.google.android.gms.version
+ADDED from [com.google.android.gms:play-services-basement:18.1.0] /Users/austinlimanek/.gradle/caches/transforms-3/22101baaa08a513511d2fe6a33f29de4/transformed/play-services-basement-18.1.0/AndroidManifest.xml:21:9-23:69
+	android:value
+		ADDED from [com.google.android.gms:play-services-basement:18.1.0] /Users/austinlimanek/.gradle/caches/transforms-3/22101baaa08a513511d2fe6a33f29de4/transformed/play-services-basement-18.1.0/AndroidManifest.xml:23:13-66
+	android:name
+		ADDED from [com.google.android.gms:play-services-basement:18.1.0] /Users/austinlimanek/.gradle/caches/transforms-3/22101baaa08a513511d2fe6a33f29de4/transformed/play-services-basement-18.1.0/AndroidManifest.xml:22:13-58
 provider#androidx.startup.InitializationProvider
 ADDED from [androidx.emoji2:emoji2:1.0.0] /Users/austinlimanek/.gradle/caches/transforms-3/4b580972190c9e236a669c6a1f1f8a9e/transformed/emoji2-1.0.0/AndroidManifest.xml:26:9-34:20
 MERGED from [androidx.work:work-runtime:2.7.1] /Users/austinlimanek/.gradle/caches/transforms-3/8254f7a56a6d62d947ec6639152035e2/transformed/work-runtime-2.7.1/AndroidManifest.xml:31:9-39:20

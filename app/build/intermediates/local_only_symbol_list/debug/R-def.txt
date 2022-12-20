@@ -11,6 +11,7 @@ drawable ic_launcher_background
 drawable ic_launcher_foreground
 id ActivityMainToAddTaskButton
 id ActivityMainToViewAllTasksButton
+id AddTaskLatLong
 id AddTaskSpinnerStatus
 id AddTaskSubmitButton
 id AddTaskTaskBody
